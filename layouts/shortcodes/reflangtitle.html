@@ -1,6 +1,9 @@
-{{- /* TODO
-  Objectives:
-    1. ref shortcode with custom LANG and multilingual TITLE
+{{- /* HowTo:
+  Code: {{< reflangtitle path="" lang="" >}}
+
+  Purpose:
+    1. ref shortcode that generates an HTML link
+    2. ref shortcode that pulls the correct language title
 */ -}}
 {{- $path := .Get "path" -}}
 {{- $ref := relref . .Params | urlize -}}

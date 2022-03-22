@@ -1,0 +1,15 @@
+#mainSections = ["blog", "posts"]                                             # Hugo default
+#mainTypes = ["article", "sitepage", "review"]                                                # YourOnly.One
+
+### BGN: Structured Data ###
+  description = "YourOnly.One's Hugo Test Site"
+### END: Structured Data ###
+
+### BGN: Theme settings
+  [[socials]]
+  name = "YourOnly.One"
+  link = "https://im.youronly.one"
+### END: Theme settings
+
+### BGN: Other Settings ###
+### END: Other Settings ###

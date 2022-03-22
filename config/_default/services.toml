@@ -1,0 +1,6 @@
+[instagram]
+  AccessToken = ""
+  disableInlineCSS = true
+
+[twitter]
+  disableInlineCSS = true

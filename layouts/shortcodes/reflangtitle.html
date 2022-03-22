@@ -9,6 +9,6 @@
 {{- $ref := relref . .Params | urlize -}}
 {{ with .Site.GetPage $path }}
   {{ range .AllTranslations }}
-    {{ if eq $ref .RelPermalink }}<a href="{{ .Permalink }}">{{ .Title }}</a>{{ break }}{{ end }}
+    {{ if eq $ref .RelPermalink }}<a href="{{ .RelPermalink }}">{{ .Title }}</a>{{ break }}{{ end }}
   {{ end }}
 {{ end }}

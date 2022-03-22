@@ -1,9 +1,0 @@
-{{- /* TODO
-  Objectives:
-    1. ref shortcode with custom LANG and multilingual TITLE
-*/ -}}
-{{- $lang := .Get "lang" -}}
-{{- $path := .Get "path" -}}
-{{- $ref := relref . .Params | urlize -}}
-
-<a href="{{ $ref }}">{{ with .Site.GetPage $ref }}{{ .Title }}{{ end }}</a>

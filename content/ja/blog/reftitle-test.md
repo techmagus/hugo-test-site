@@ -8,6 +8,6 @@ translationKey = "reftitle-test-202281"
 
 参照されている言語に適したタイトルを表示する必要があります。
 
-* {{< reftitle path="reftitle-test.md" lang="en-ph" >}}
-* {{< reftitle path="reftitle-test.md" lang="ja" >}}
-* {{< reftitle path="reftitle-test.md" lang="ko" >}}
+* {{< reflangtitle path="reftitle-test.md" lang="en-ph" >}}
+* {{< reflangtitle path="reftitle-test.md" lang="ja" >}}
+* {{< reflangtitle path="reftitle-test.md" lang="ko" >}}

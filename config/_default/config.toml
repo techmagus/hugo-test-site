@@ -43,3 +43,14 @@
 
 
 #######  #######  #######  #######  #######  #######  #######  #######
+
+
+[outputFormats]
+  [outputFormats.SearchIndex]
+    mediaType = "application/json"
+    baseName = "searchindex"
+    isPlainText = true
+    notAlternative = true
+
+
+#######  #######  #######  #######  #######  #######  #######  #######

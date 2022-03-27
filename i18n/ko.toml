@@ -1,0 +1,24 @@
+# BGN: Date and Time Formats
+  [datetimelongtzd]
+    other = "2006년 01월 02일 15시 04분 05초 -0700"
+  [datetimelongtzn]
+    other = "2006년 01월 02일 15시 04분 05초 MST"
+  [datetimetzd]
+    other = "2006년 01월 02일 15시 04분 -0700"
+  [datetimetzn]
+    other = "2006년 01월 02일 15시 04분 MST"
+  [datetimeonly]
+    other = "2006년 01월 02일 15시 04분 15:04"
+  [dateonly]
+    other = "2006년 01월 02일"
+  [timelongtzd]
+    other = "15시 04분 05초 -0700"
+  [timelongtzn]
+    other = "15시 04분 05초 MST"
+  [timetzd]
+    other = "15시 04분 -0700"
+  [timetzn]
+    other = "15시 04분 MST"
+  [timeonly]
+    other = "15시 04분"
+# END: Date and Time Formats

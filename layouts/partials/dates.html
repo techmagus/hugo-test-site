@@ -1,0 +1,5 @@
+{{- $datetimelongtzn := (i18n "datetimelongtzn") -}}
+<p class="content-dates">
+  {{ i18n "last_mod" }} {{ time.Format $datetimelongtzn .Lastmod }}<br/>
+  {{ i18n "created" }} {{ time.Format $datetimelongtzn .Date }}
+</p>

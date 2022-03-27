@@ -3,7 +3,7 @@
   <channel>
     <title>YourOnly.One&#39;s Hugo Test Site</title>
     <link>https://hugotest.youronly.one/</link>
-    <description>[i18n] string_recent_content [i18n] string_on YourOnly.One&#39;s Hugo Test Site</description>
+    <description>Recent content on YourOnly.One&#39;s Hugo Test Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-PH</language>
     <lastBuildDate>Tue, 22 Mar 2022 14:22:30 +0800</lastBuildDate>

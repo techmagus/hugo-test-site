@@ -1,4 +1,4 @@
-{{- /* HowTo:
+{{- /* HOW TO USE
   Code: {{< reflangtitle path="" lang="" >}}
 
   Purpose:
@@ -6,9 +6,9 @@
     2. ref shortcode that pulls the correct language title
 */ -}}
 {{- $path := .Get "path" -}}
-{{- $ref := relref . .Params | urlize -}}
-{{ with .Site.GetPage $path }}
-  {{ range .AllTranslations }}
+{{- $ref := relref . .Params -}}
+{{- with .Site.GetPage $path -}}
+  {{- range .AllTranslations -}}
     {{ if eq $ref .RelPermalink }}<a href="{{ .RelPermalink }}">{{ .Title }}</a>{{ break }}{{ end }}
-  {{ end }}
-{{ end }}
+  {{- end -}}
+{{- end -}}

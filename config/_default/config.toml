@@ -1,5 +1,5 @@
 ####### Base Config #######
-  baseURL = "https://example.com"                    # .Site.BaseURL
+  baseURL = "https://hugotest.youronly.one/"                    # .Site.BaseURL
   title = "YourOnly.One's Hugo Test Site"                # .Site.Title; IMPT for Schema.org; OpenGraph; Twitter Cards -- for RDFa, Microdata, JSON-LD
   copyright = ""                                          # .Site.Copyright; leave empty and uncommented to override theme default; we are using our own footer
   timeZone = "Asia/Manila"

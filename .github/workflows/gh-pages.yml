@@ -29,14 +29,6 @@ jobs:
         with:
           node-version: '16.14.2'
 
-      - name: Cache npm dependencies
-        uses: actions/cache@v2
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
-
       - name: Cache hugo dependencies
         uses: actions/cache@v2
         with:
@@ -45,7 +37,6 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-hugomod-
 
-      - run: npm ci
       - run: hugo --minify
 
       - name: Deploy

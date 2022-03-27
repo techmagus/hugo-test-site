@@ -1,3 +1,113 @@
+# BGN: theme default
+  [menu_title]
+  other = "메인 메뉴"
+
+  [menu_home]
+  other = "집"
+
+  [menu_mobile]
+  other = "메뉴"
+
+  [pager_next]
+  other = "다음"
+
+  [pager_prev]
+  other = "이전"
+
+  [taxo_tags]
+  other = "태그"
+
+  [last_mod]
+  other = "업데이트됨:"
+
+  [created]
+  other = "만들어진:"
+
+  [search_placeholder]
+  other = "검색하고자 하는 용어를 입력하세요."
+
+  [search_title]
+  other = "검색"
+
+  [search_loading]
+  other = "검색 색인 로드 중…"
+
+  [string_at]
+  other = "~에"
+
+  [string_by]
+  other = "~에 의해"
+
+  [string_follow]
+  other = "따르다"
+
+  [string_in]
+  other = "입력"
+
+  [string_on]
+  other = "켜짐"
+
+  [string_recent_content]
+  other = "최근 콘텐츠"
+
+  [string_see_also]
+  other = "또한보십시오"
+
+  [js_required]
+  other = "이 기능을 사용하려면 Javascript가 활성화되어 있어야 합니다."
+
+  [contact_submitted]
+  other = "메시지가 전송되었습니다."
+
+  [contact_error]
+  other = "메시지를 보내는 중에 오류가 발생했습니다."
+
+  [contact_name]
+  other = "이름"
+
+  [contact_name_placeholder]
+  other = "당신의 이름"
+
+  [contact_mail]
+  other = "이메일 주소"
+
+  [contact_mail_placeholder]
+  other = "귀하의 이메일 주소"
+
+  [contact_subject]
+  other = "주제"
+
+  [contact_subject_placeholder]
+  other = "짧은 주제"
+
+  [contact_message]
+  other = "메세지"
+
+  [contact_message_placeholder]
+  other = "메시지는 여기로…"
+
+  [contact_submit]
+  other = "문자 보내"
+
+  [contact_honypot]
+  other = "당신이 인간이라면 건너 뛰십시오"
+
+  [lang_select_title]
+  other = "언어 선택기"
+
+  [cookieconsent_message]
+  other = "T이 웹사이트는 쿠키를 사용합니다. 일부는 웹사이트가 작동하는 데 필요합니다. 추적 및 분석 쿠키는 선택 사항입니다."
+
+  [cookieconsent_accept]
+  other = "모든것을 받아 들인다"
+
+  [cookieconsent_decline]
+  other = "필요한 경우에만"
+
+  [privacy_policy]
+  other = "개인 정보 정책"
+# END: theme default
+
 # BGN: Date and Time Formats
   [datetimelongtzd]
     other = "2006년 01월 02일 15시 04분 05초 -0700"

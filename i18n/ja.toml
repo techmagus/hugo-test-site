@@ -1,3 +1,113 @@
+# BGN: theme default
+  [menu_title]
+  other = "メインメニュー"
+
+  [menu_home]
+  other = "家"
+
+  [menu_mobile]
+  other = "メニュー"
+
+  [pager_next]
+  other = "次"
+
+  [pager_prev]
+  other = "前"
+
+  [taxo_tags]
+  other = "タグ"
+
+  [last_mod]
+  other = "更新しました："
+
+  [created]
+  other = "作成した："
+
+  [search_placeholder]
+  other = "検索する用語を入力します。"
+
+  [search_title]
+  other = "検索"
+
+  [search_loading]
+  other = "検索インデックスを読み込んでいます…"
+
+  [string_at]
+  other = "で"
+
+  [string_by]
+  other = "に"
+
+  [string_follow]
+  other = "従う"
+
+  [string_in]
+  other = "の"
+
+  [string_on]
+  other = "オン"
+
+  [string_recent_content]
+  other = "最近のコンテンツ"
+
+  [string_see_also]
+  other = "も参照してください"
+
+  [js_required]
+  other = "この関数を使用するには、Javascriptを有効にする必要があります。"
+
+  [contact_submitted]
+  other = "メッセージが送信されました。"
+
+  [contact_error]
+  other = "メッセージの送信中にエラーが発生しました。"
+
+  [contact_name]
+  other = "名前"
+
+  [contact_name_placeholder]
+  other = "あなたの名前"
+
+  [contact_mail]
+  other = "電子メールアドレス"
+
+  [contact_mail_placeholder]
+  other = "メールアドレス"
+
+  [contact_subject]
+  other = "主題"
+
+  [contact_subject_placeholder]
+  other = "短い主題"
+
+  [contact_message]
+  other = "メッセージ"
+
+  [contact_message_placeholder]
+  other = "メッセージはここに行きます…"
+
+  [contact_submit]
+  other = "メッセージを送る"
+
+  [contact_honypot]
+  other = "あなたが人間ならスキップする"
+
+  [lang_select_title]
+  other = "言語セレクター"
+
+  [cookieconsent_message]
+  other = "このウェブサイトはクッキーを使用しています。 ウェブサイトが機能するために必要なものもあります。 追跡および分析Cookieはオプションです。"
+
+  [cookieconsent_accept]
+  other = "すべて受け入れる"
+
+  [cookieconsent_decline]
+  other = "必要なだけ"
+
+  [privacy_policy]
+  other = "プライバシーポリシー"
+# END: theme default
+
 # BGN: Date and Time Formats
   [datetimelongtzd]
     other = "2006年1月2日 15時04分05秒 -0700"

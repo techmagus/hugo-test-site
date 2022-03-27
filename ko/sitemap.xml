@@ -2,162 +2,162 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://example.com/ko/blog/</loc>
-    <lastmod>2022-03-27T22:37:09+00:00</lastmod>
+    <loc>https://hugotest.youronly.one/ko/blog/</loc>
+    <lastmod>2022-03-27T22:43:57+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-ph"
-                href="https://example.com/blog/"
+                href="https://hugotest.youronly.one/blog/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="https://example.com/ja/blog/"
+                href="https://hugotest.youronly.one/ja/blog/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://example.com/ko/blog/"
+                href="https://hugotest.youronly.one/ko/blog/"
                 />
   </url><url>
-    <loc>https://example.com/ko/reflangtitle-test-202281/</loc>
-    <lastmod>2022-03-27T22:37:09+00:00</lastmod>
+    <loc>https://hugotest.youronly.one/ko/reflangtitle-test-202281/</loc>
+    <lastmod>2022-03-27T22:43:57+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-ph"
-                href="https://example.com/reflangtitle-test-202281/"
+                href="https://hugotest.youronly.one/reflangtitle-test-202281/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="https://example.com/ja/reflangtitle-test-202281/"
+                href="https://hugotest.youronly.one/ja/reflangtitle-test-202281/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://example.com/ko/reflangtitle-test-202281/"
+                href="https://hugotest.youronly.one/ko/reflangtitle-test-202281/"
                 />
   </url><url>
-    <loc>https://example.com/ko/</loc>
-    <lastmod>2022-03-27T22:37:09+00:00</lastmod>
+    <loc>https://hugotest.youronly.one/ko/</loc>
+    <lastmod>2022-03-27T22:43:57+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-ph"
-                href="https://example.com/"
+                href="https://hugotest.youronly.one/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="https://example.com/ja/"
+                href="https://hugotest.youronly.one/ja/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://example.com/ko/"
+                href="https://hugotest.youronly.one/ko/"
                 />
   </url><url>
-    <loc>https://example.com/ko/tz-abbr-test-offset-20062/</loc>
-    <lastmod>2022-03-27T22:37:09+00:00</lastmod>
+    <loc>https://hugotest.youronly.one/ko/tz-abbr-test-offset-20062/</loc>
+    <lastmod>2022-03-27T22:43:57+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-ph"
-                href="https://example.com/tz-abbr-test-offset-20062/"
+                href="https://hugotest.youronly.one/tz-abbr-test-offset-20062/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="https://example.com/ja/tz-abbr-test-offset-20062/"
+                href="https://hugotest.youronly.one/ja/tz-abbr-test-offset-20062/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://example.com/ko/tz-abbr-test-offset-20062/"
+                href="https://hugotest.youronly.one/ko/tz-abbr-test-offset-20062/"
                 />
   </url><url>
-    <loc>https://example.com/ko/tz-abbr-test-offset-no-20062/</loc>
-    <lastmod>2022-03-27T22:37:09+00:00</lastmod>
+    <loc>https://hugotest.youronly.one/ko/tz-abbr-test-offset-no-20062/</loc>
+    <lastmod>2022-03-27T22:43:57+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-ph"
-                href="https://example.com/tz-abbr-test-offset-no-20062/"
+                href="https://hugotest.youronly.one/tz-abbr-test-offset-no-20062/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="https://example.com/ja/tz-abbr-test-offset-no-20062/"
+                href="https://hugotest.youronly.one/ja/tz-abbr-test-offset-no-20062/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://example.com/ko/tz-abbr-test-offset-no-20062/"
+                href="https://hugotest.youronly.one/ko/tz-abbr-test-offset-no-20062/"
                 />
   </url><url>
-    <loc>https://example.com/ko/categories/</loc>
+    <loc>https://hugotest.youronly.one/ko/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-ph"
-                href="https://example.com/categories/"
+                href="https://hugotest.youronly.one/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="https://example.com/ja/categories/"
+                href="https://hugotest.youronly.one/ja/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://example.com/ko/categories/"
+                href="https://hugotest.youronly.one/ko/categories/"
                 />
   </url><url>
-    <loc>https://example.com/ko/channels/</loc>
+    <loc>https://hugotest.youronly.one/ko/channels/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-ph"
-                href="https://example.com/channels/"
+                href="https://hugotest.youronly.one/channels/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="https://example.com/ja/channels/"
+                href="https://hugotest.youronly.one/ja/channels/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://example.com/ko/channels/"
+                href="https://hugotest.youronly.one/ko/channels/"
                 />
   </url><url>
-    <loc>https://example.com/ko/series/</loc>
+    <loc>https://hugotest.youronly.one/ko/series/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-ph"
-                href="https://example.com/series/"
+                href="https://hugotest.youronly.one/series/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="https://example.com/ja/series/"
+                href="https://hugotest.youronly.one/ja/series/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://example.com/ko/series/"
+                href="https://hugotest.youronly.one/ko/series/"
                 />
   </url><url>
-    <loc>https://example.com/ko/tags/</loc>
+    <loc>https://hugotest.youronly.one/ko/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-ph"
-                href="https://example.com/tags/"
+                href="https://hugotest.youronly.one/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="https://example.com/ja/tags/"
+                href="https://hugotest.youronly.one/ja/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://example.com/ko/tags/"
+                href="https://hugotest.youronly.one/ko/tags/"
                 />
   </url>
 </urlset>

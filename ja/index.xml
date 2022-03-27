@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>YourOnly.OneのHugoテストサイト</title>
-    <link>https://example.com/ja/</link>
+    <link>https://hugotest.youronly.one/ja/</link>
     <description>[i18n] string_recent_content [i18n] string_on YourOnly.OneのHugoテストサイト</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <lastBuildDate>Tue, 22 Mar 2022 15:22:30 +0900</lastBuildDate>
-    <atom:link href="https://example.com/ja/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://hugotest.youronly.one/ja/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>JA: &lt;reflangtitle&gt;shortcodeテストページ</title>
-      <link>https://example.com/ja/reflangtitle-test-202281/</link>
+      <link>https://hugotest.youronly.one/ja/reflangtitle-test-202281/</link>
       <pubDate>Tue, 22 Mar 2022 15:22:30 +0900</pubDate>
-      <guid>https://example.com/ja/reflangtitle-test-202281/</guid>
+      <guid>https://hugotest.youronly.one/ja/reflangtitle-test-202281/</guid>
       <description>&lt;p&gt;Create a link of a &lt;code&gt;ref&lt;/code&gt;-erenced file with the actual title pulled automatically; and with multilingual support.&lt;/p&gt;
 &lt;h2 id=&#34;how-to-use&#34;&gt;How to use&lt;/h2&gt;
 &lt;!-- raw HTML omitted --&gt;
@@ -43,9 +43,9 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Will output:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://example.com/reflangtitle-test-202281/&#34;&gt;EN-PH: &amp;lt;reflangtitle&amp;gt; shortcode test page&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://example.com/ja/reflangtitle-test-202281/&#34;&gt;JA: &amp;lt;reflangtitle&amp;gt;shortcodeテストページ&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://example.com/ko/reflangtitle-test-202281/&#34;&gt;KO: &amp;lt;reflangtitle&amp;gt; shortcode 테스트 페이지&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://hugotest.youronly.one/reflangtitle-test-202281/&#34;&gt;EN-PH: &amp;lt;reflangtitle&amp;gt; shortcode test page&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://hugotest.youronly.one/ja/reflangtitle-test-202281/&#34;&gt;JA: &amp;lt;reflangtitle&amp;gt;shortcodeテストページ&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://hugotest.youronly.one/ko/reflangtitle-test-202281/&#34;&gt;KO: &amp;lt;reflangtitle&amp;gt; shortcode 테스트 페이지&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;empty-or-without-lang&#34;&gt;empty or without &lt;code&gt;lang&lt;/code&gt;&lt;/h3&gt;
 &lt;p&gt;These codes:&lt;/p&gt;
@@ -55,16 +55,16 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Will output:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://example.com/ja/reflangtitle-test-202281/&#34;&gt;JA: &amp;lt;reflangtitle&amp;gt;shortcodeテストページ&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://example.com/ja/reflangtitle-test-202281/&#34;&gt;JA: &amp;lt;reflangtitle&amp;gt;shortcodeテストページ&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://hugotest.youronly.one/ja/reflangtitle-test-202281/&#34;&gt;JA: &amp;lt;reflangtitle&amp;gt;shortcodeテストページ&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://hugotest.youronly.one/ja/reflangtitle-test-202281/&#34;&gt;JA: &amp;lt;reflangtitle&amp;gt;shortcodeテストページ&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     
     <item>
       <title>JA: timezone abbr with offset</title>
-      <link>https://example.com/ja/tz-abbr-test-offset-20062/</link>
+      <link>https://hugotest.youronly.one/ja/tz-abbr-test-offset-20062/</link>
       <pubDate>Mon, 02 Jan 2006 15:04:05 +0900</pubDate>
-      <guid>https://example.com/ja/tz-abbr-test-offset-20062/</guid>
+      <guid>https://hugotest.youronly.one/ja/tz-abbr-test-offset-20062/</guid>
       <description>&lt;p&gt;This page displays the output of &lt;code&gt;.Date.Format&lt;/code&gt; and &lt;code&gt;time.Format&lt;/code&gt; depending on the format chosen.&lt;/p&gt;
 &lt;style&gt;
    
@@ -118,9 +118,9 @@
     
     <item>
       <title>JA: timezone abbr without offset</title>
-      <link>https://example.com/ja/tz-abbr-test-offset-no-20062/</link>
+      <link>https://hugotest.youronly.one/ja/tz-abbr-test-offset-no-20062/</link>
       <pubDate>Mon, 02 Jan 2006 15:04:05 +0900</pubDate>
-      <guid>https://example.com/ja/tz-abbr-test-offset-no-20062/</guid>
+      <guid>https://hugotest.youronly.one/ja/tz-abbr-test-offset-no-20062/</guid>
       <description>&lt;p&gt;This page displays the output of &lt;code&gt;.Date.Format&lt;/code&gt; and &lt;code&gt;time.Format&lt;/code&gt; depending on the format chosen.&lt;/p&gt;
 &lt;style&gt;
    

@@ -12,9 +12,9 @@ jobs:
     concurrency:
       group: ${{ github.workflow }}-${{ github.ref }}
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
-          submodules: recursive  # Fetch Hugo themes (true OR recursive)
+          submodules: true  # Fetch Hugo themes (true OR recursive)
           fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
 
       - name: Setup Hugo
@@ -24,11 +24,6 @@ jobs:
           #hugo-version: '0.96.0'
           extended: true
 
-      - name: Setup Node
-        uses: actions/setup-node@v2
-        with:
-          node-version: '16.14.2'
-
       - name: Cache hugo dependencies
         uses: actions/cache@v2
         with:
@@ -37,7 +32,8 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-hugomod-
 
-      - run: hugo --minify
+      - name: Build
+        run: hugo --minify
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3

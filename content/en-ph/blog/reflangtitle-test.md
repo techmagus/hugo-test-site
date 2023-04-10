@@ -2,6 +2,7 @@
 title = "EN-PH: <reflangtitle> shortcode test page"
 description = "test page for the <reflangtitle> shortcode"
 date = "2022-03-22T14:22:30"
+expirydate = 2023-04-10T10:18:00+08:00
 slug = "reflangtitle-test"
 translationKey = "reflangtitle-test-202281"
 +++

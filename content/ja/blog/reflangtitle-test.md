@@ -2,6 +2,7 @@
 title = "JA: <reflangtitle>shortcodeテストページ"
 description = "<reflangtitle>shortcodeのテストページ"
 date = "2022-03-22T15:22:30"
+expirydate = 2023-04-10T10:18:00+08:00
 slug = "reflangtitle-test"
 translationKey = "reflangtitle-test-202281"
 +++

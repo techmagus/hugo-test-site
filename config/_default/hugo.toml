@@ -1,0 +1,40 @@
+####### Base Config #######
+  baseURL = "https://hugotest.youronly.one/"                    # .Site.BaseURL
+  title = "YourOnly.One's Hugo Test Site"                # .Site.Title; IMPT for Schema.org; OpenGraph; Twitter Cards -- for RDFa, Microdata, JSON-LD
+  copyright = ""                                          # .Site.Copyright; leave empty and uncommented to override theme default; we are using our own footer
+  timeZone = "Etc/UTC"
+
+
+####### Site settings #######
+  paginate = 10
+
+####### Backend settings #######
+  #canonifyURLs = true
+  relativeURLs = false
+
+  ## Dev settings ##
+    publishDir = "public"
+    enableMissingTranslationPlaceholders = true
+
+  ## Other settings ##
+    disableKinds = ["robotsTXT"]
+
+#### LANG stuff ####
+  defaultContentLanguage = "en-ph"
+  defaultContentLanguageInSubdir = false
+  hasCJKLanguage = true
+  languageCode = "en-PH"
+
+
+#######  #######  #######  #######  #######  #######  #######  #######
+
+
+[outputFormats]
+  [outputFormats.SearchIndex]
+    mediaType = "application/json"
+    baseName = "searchindex"
+    isPlainText = true
+    notAlternative = true
+
+
+#######  #######  #######  #######  #######  #######  #######  #######

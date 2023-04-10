@@ -12,6 +12,15 @@
   sidebar = false
   submitted = true
   poweredby = true
+  logoWidth = 64
+  imageMaxWidth = 400
+  feedlinks = true
+  contact  = ""
+  #dateformat =
+  #favicon = ""
+  #icon = ""
+  #image = ""
+  #realfavicongenerator = ""
 
   [[socials]]
   name = "YourOnly.One"

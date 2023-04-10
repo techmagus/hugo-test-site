@@ -1,0 +1,1942 @@
+@charset "UTF-8";
+/***
+  * My personal styles and overrides
+  *
+  * Websites:
+  *   * YourOnly.One™: https://YourOnly.One
+  *
+  * Contact:
+  *   * Fediverse: https://quey.org/@techmagus | @techmagus@quey.org
+  *   * Facebook: https://fb.me/techmagus | https://m.me/techmagus
+***/
+
+/***
+  * yuki-style.css Copyright © 2003-2023 JC John Sese Cuneta
+  *
+  * Licenses: [1] MIT/Expat License; [2] MPL v2.0; [3] LGPLv3
+  *
+  * LICENSE: MIT License / Expat License
+  *   Permission is hereby granted, free of charge, to any person obtaining a copy
+  *   of this software and associated documentation files (the "Software"), to deal
+  *   in the Software without restriction, including without limitation the rights
+  *   to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  *   copies of the Software, and to permit persons to whom the Software is
+  *   furnished to do so, subject to the following conditions:
+  *
+  *   The above copyright notice and this permission notice shall be included in all
+  *   copies or substantial portions of the Software.
+  *
+  *   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  *   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  *   FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  *   AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  *   LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  *   OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  *   SOFTWARE.
+  *
+  * LICENSE: Mozilla Public License Version 2.0 ("MPL 2.0")
+  *   This Source Code Form is subject to the terms of the Mozilla Public
+  *   License, v. 2.0. If a copy of the MPL was not distributed with this
+  *   file, You can obtain one at http://mozilla.org/MPL/2.0/.
+  *
+  * LICENSE: GNU LESSER GENERAL PUBLIC LICENSE Version 3 ("LGPLv3")
+  *   This program is free software: you can redistribute it and/or modify
+  *   it under the terms of the Lesser GNU General Public License as published by
+  *   the Free Software Foundation, either version 3 of the License, or
+  *   (at your option) any later version.
+  *
+  *   This program is distributed in the hope that it will be useful,
+  *   but WITHOUT ANY WARRANTY; without even the implied warranty of
+  *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  *   Lesser GNU General Public License for more details.
+  *
+  *   You should have received a copy of the Lesser GNU General Public License
+  *   along with this program.  If not, see <http://www.gnu.org/licenses/>.
+***/
+
+/***
+  * Other Attributions
+  *
+  * Embed Responsively: embedresponsively.com
+  * Fork-Awesome
+  * Twemoji
+  * Cryptocoins (webfont/svg): https://github.com/AllienWorks/cryptocoins
+***/
+
+/***
+  * Based on:
+  *
+  *   * CSS Color Module Level 5
+  *      * WD, 2022-06-28
+  *      * https://www.w3.org/TR/css-color-5/
+  *
+  *   * CSS Color Module Level 4
+  *      * CR, 2022-11-01
+  *      * https://www.w3.org/TR/css-color-4/
+  *
+  *   * CSS Color Module Level 3
+  *      * REC, 2018-06-19
+  *      * https://www.w3.org/TR/css-color-3/
+  *
+  *   * CSS Fonts Module Level 4
+  *      * WD, 2018-09-20
+  *      * https://www.w3.org/TR/css-fonts-4/
+  *      * See: see paninap-fonts.css
+  *
+  *   * CSS Fonts Module Level 3
+  *      * REC, 2018-09-20
+  *      * https://www.w3.org/TR/css-fonts-3/
+  *
+  *   * CSS Text Decoration Module Level 4
+  *      * WD, 2018-03-13
+  *      * https://www.w3.org/TR/css-text-decor-4/
+  *      * See: text-decoration-skip -- not using currently
+  *
+  *   * CSS Text Decoration Module Level 3
+  *      * CR, 2018-07-03
+  *      * https://www.w3.org/TR/css-text-decor-3/
+  *      * See: text-decoration property
+  *
+  *   * CSS Custom Properties for Cascading Variables Module Level 1
+  *      * CR, 2015-12-03
+  *      * https://www.w3.org/TR/css-variables/
+  *      * See: --font-sans and --font-serif, and var()
+  *
+  *   * Selectors Level 4
+  *      * WD, 2018-11-21
+  *      * https://www.w3.org/TR/selectors-4/
+  *      * See: :dir() and :lang("*-Latn")
+  *
+  *   * Selectors Level 3
+  *      * REC, 2018-11-06
+  *      * https://www.w3.org/TR/selectors-3/
+  *      * See: :root, :first-child, :last-child
+  *
+***/
+
+/***
+  * Notes:
+  *
+  * All colors must be:
+  *   * hwb() -- our current base color format; do not use hex and rgb
+  *   * lch() -- temporary only, until oklch() is widely supported
+  *   * oklch()
+  *
+  * CSS Logical
+  *   * https://www.w3.org/TR/css-logical-1/
+  *   * https://css-tricks.com/css-logical-properties/
+  *     * border-{block,inline}-{start,end}-{width,style,color}
+  *     * margin-{block,inline}-{start,end}
+  *     * padding-{block,inline}-{start,end}
+***/
+
+/***
+** Color conversion tools:
+**
+**   * https://products.aspose.app/svg/color-converter/hwb-to-lch
+**   * https://css.land/lch/
+**   * https://lch.oklch.com
+**   * https://oklch.com
+***/
+
+/*************************
+** BGN: Global Settings **
+*************************/
+  :root {
+    /* BLACK */
+      --color-black-bg: hwb(0 0% 100% / 0.25);
+      --color-black-bg: lch(0% 0 0 / 0.25);
+      --color-black-bg: oklch(0% 0 0 / 0.25);
+      --color-black: hwb(0 0% 100%);
+      --color-black: lch(0% 0 0);
+      --color-black: oklch(0% 0 0);
+
+    /* GREY LIGHT */
+      --color-grey-light-bg: hwb(0 83% 17% / 0.20);
+      --color-grey-light-bg: lch(84.556% 0 139.088 / 0.20);
+      --color-grey-light-bg: oklch(86.69% 0 0 / 0.20);
+      --color-grey-light: hwb(0 83% 17%);
+      --color-grey-light: lch(84.556% 0 139.088);
+      --color-grey-light: oklch(86.69% 0 0);
+
+    /* SILVER */
+      --color-silver-bg: hwb(0 75% 25% / 0.20);
+      --color-silver-bg: lch(77.704% 0 139.088 / 0.20);
+      --color-silver-bg: oklch(80.78% 0 0 / 0.20);
+      --color-silver: hwb(0 75% 25%);
+      --color-silver: lch(77.704% 0 139.088);
+      --color-silver: oklch(80.78% 0 0);
+
+    /* WHITE */
+      --color-white-bg: hwb(0 100% 0% / 0.5);
+      --color-white-bg: lch(100% 0 139.088 / 0.5);
+      --color-white-bg: oklch(100% 0 0 / 0.5);
+      --color-white: hwb(0 100% 0%);
+      --color-white: lch(100% 0 139.088);
+      --color-white: oklch(100% 0 0);
+
+    /* RED */
+      --color-red-bg: hwb(0 0% 0% / 0.20);
+      --color-red-bg: lch(54.291% 106.83719104365966 40.85766878213079 / 0.20);
+      --color-red-bg: oklch(62.8% 0.25768330773615683 29.2338851923426 / 0.20);
+      --color-red: hwb(0 0% 0%);
+      --color-red: lch(54.291% 106.83719104365966 40.85766878213079);
+      --color-red: oklch(62.8% 0.25768330773615683 29.2338851923426);
+
+    /* LIME */
+      --color-lime-bg: hwb(120 0% 0% / 0.20);
+      --color-lime-bg: lch(87.819% 113.32 134.38 / 0.20);
+      --color-lime-bg: oklch(86.64% 0.2948272403370167 142.49533888780996 / 0.20);
+      --color-lime: hwb(120 0% 0%);
+      --color-lime: lch(87.819% 113.32 134.38);
+      --color-lime: oklch(86.64% 0.2948272403370167 142.49533888780996);
+
+    /* GREEN */
+      --color-green-bg: hwb(120 0% 50% / 0.25);
+      --color-green-bg: lch(46.278% 67.984 134.384 / 0.25);
+      --color-green-bg: oklch(51.98% 0.17685825418032033 142.49533888780994 / 0.25);
+      --color-green: hwb(120 0% 50%);
+      --color-green: lch(46.278% 67.984 134.384);
+      --color-green: oklch(51.98% 0.17685825418032033 142.49533888780994);
+
+    /* BLUE */
+      --color-blue-bg: hwb(240 0% 0% / 0.35);
+      --color-blue-bg: lch(29.568% 131.1854613942089 301.36428148973533 / 0.35);
+      --color-blue-bg: oklch(45.2% 0.31321437166460125 264.052020638055 / 0.35);
+      --color-blue: hwb(240 0% 0%);
+      --color-blue: lch(29.568% 131.1854613942089 301.36428148973533);
+      --color-blue: oklch(45.2% 0.31321437166460125 264.052020638055);
+
+    /* INDIGO DYE*/
+      --color-indigo-dye-bg: hwb(203.208 0% 58% / 0.35);
+      --color-indigo-dye-bg: lch(25.753% 30.080379743730905 259.49712579751815 / 0.35);
+      --color-indigo-dye-bg: oklch(36.26% 0.091 244.97 / 0.35);
+      --color-indigo-dye: hwb(203.208 0% 58%);
+      --color-indigo-dye: lch(25.753% 30.080379743730905 259.49712579751815);
+      --color-indigo-dye: oklch(36.26% 0.091 244.97);
+
+    /* BLUE MIDNIGHT */
+      --color-blue-midnight-bg: hwb(240 10% 56% / 0.5);
+      --color-blue-midnight-bg: lch(14.929% 57.139 297.016 / 0.5);
+      --color-blue-midnight-bg: oklch(28.81% 0.144 272.76 / 0.5);
+      --color-blue-midnight: hwb(240 10% 56%);
+      --color-blue-midnight: lch(14.929% 57.139 297.016);
+      --color-blue-midnight: oklch(28.81% 0.144 272.76);
+
+    /* AQUA / CYAN */
+      --color-aqua-bg: hwb(180 0% 0% / 0.20);
+      --color-aqua-bg: lch(90.666% 52.81982158149982 196.45478245011327 / 0.20);
+      --color-aqua-bg: oklch(90.54% 0.15455001106436891 194.76894793196382 / 0.20);
+      --color-aqua: hwb(180 0% 0%);
+      --color-aqua: lch(90.666% 52.81982158149982 196.45478245011327);
+      --color-aqua: oklch(90.54% 0.15455001106436891 194.76894793196382);
+
+    /* FUCHSIA / MAGENTA */
+      --color-magenta-bg: hwb(300 0% 0% / 0.22);
+      --color-magenta-bg: lch(60.169% 111.38659434373716 327.1054738802461 / 0.22);
+      --color-magenta-bg: oklch(70.17% 0.322 328.36 / 0.22);
+      --color-magenta: hwb(300 0% 0%);
+      --color-magenta: lch(60.169% 111.38659434373716 327.1054738802461);
+      --color-magenta: oklch(70.17% 0.322 328.36);
+
+    /* YELLOW */
+      --color-yellow-bg: hwb(60 0% 0% / 0.22);
+      --color-yellow-bg: lch(97.607% 94.712 99.57226374240976 / 0.22);
+      --color-yellow-bg: oklch(96.8% 0.21100590772552355 109.76923207652125 / 0.22);
+      --color-yellow: hwb(60 0% 0%);
+      --color-yellow: lch(97.607% 94.712 99.57226374240976);
+      --color-yellow: oklch(96.8% 0.21100590772552355 109.76923207652125);
+
+    /* ORANGE */
+      --color-orange-bg: hwb(38.824 0% 0% / 0.22);
+      --color-orange-bg: lch(75.59% 83.7587948421583 70.82367779707081 / 0.22);
+      --color-orange-bg: oklch(79.27% 0.171 70.67 / 0.22);
+      --color-orange: hwb(38.824 0% 0%);
+      --color-orange: lch(75.59% 83.7587948421583 70.82367779707081);
+      --color-orange: oklch(79.27% 0.171 70.67);
+
+    /* GOLD */
+      --color-gold-bg: hwb(50.588 0% 0% / 0.20);
+      --color-gold-bg: lch(87.468% 86.59103759455243 88.07454203103275 / 0.20);
+      --color-gold-bg: oklch(88.68% 0.182 95.33 / 0.20);
+      --color-gold: hwb(50.588 0% 0%);
+      --color-gold: lch(87.468% 86.59103759455243 88.07454203103275);
+      --color-gold: oklch(88.68% 0.182 95.33);
+
+    /* PINK */
+      --color-pink-bg: hwb(349.524 75% 0% / 0.35);
+      --color-pink-bg: lch(83.787% 24.724253984206204 8.745997286616099 / 0.35);
+      --color-pink-bg: oklch(86.77% 0.07354199863627744 7.08551427339547 / 0.35);
+      --color-pink: hwb(349.524 75% 0%);
+      --color-pink: lch(83.787% 24.724253984206204 8.745997286616099);
+      --color-pink: oklch(86.77% 0.07354199863627744 7.08551427339547);
+
+    /* BROWN */
+      --color-brown-bg: hwb(26 39% 31% / 0.20);
+      --color-brown-bg: lch(59.04% 27.83 60.49 / 0.20);
+      --color-brown-bg: oklch(64.89% 0.07 58.55 / 0.20);
+      --color-brown: hwb(26 39% 31%);
+      --color-brown: lch(59.04% 27.83 60.49);
+      --color-brown: oklch(64.89% 0.07 58.55);
+
+    /* BROWN MEDIUM DARK */
+      --color-brown-medium-dark-bg: hwb(27 34% 32% / 0.20);
+      --color-brown-medium-dark-bg: lch(56.91% 33.11 61.54 / 0.20);
+      --color-brown-medium-dark-bg: oklch(63.08% 0.081 59.89 / 0.20);
+      --color-brown-medium-dark: hwb(27 34% 32%);
+      --color-brown-medium-dark: lch(56.91% 33.11 61.54);
+      --color-brown-medium-dark: oklch(63.08% 0.081 59.89);
+
+    /* FACEBOOK */
+      --color-facebook-bg: hwb(220 26% 30% / 0.25);
+      --color-facebook-bg: lch(43.93% 45.04 276.51 / 0.25);
+      --color-facebook-bg: oklch(52.56% 0.126 262.79 / 0.25);
+      --color-facebook: hwb(220 26% 30%);
+      --color-facebook: lch(43.93% 45.04 276.51);
+      --color-facebook: oklch(52.56% 0.126 262.79);
+
+    /* TWITTER */
+      --color-twitter-bg: hwb(203 11% 13% / 0.25);
+      --color-twitter-bg: lch(57.88% 48.94 256.6 / 0.25);
+      --color-twitter-bg: oklch(64.02% 0.148 243.45 / 0.25);
+      --color-twitter: hwb(203 11% 13%);
+      --color-twitter: lch(57.88% 48.94 256.6);
+      --color-twitter: oklch(64.02% 0.148 243.45);
+
+    /* GOOGLEPLUS */
+      --color-googleplus-bg: hwb(5 22% 14% / 0.25);
+      --color-googleplus-bg: lch(52.25% 71.66 35.83 / 0.25);
+      --color-googleplus-bg: oklch(60.38% 0.187 28.96 / 0.25);
+      --color-googleplus: hwb(5 22% 14%);
+      --color-googleplus: lch(52.25% 71.66 35.83);
+      --color-googleplus: oklch(60.38% 0.187 28.96);
+
+    /* UBUNTU */
+      --color-ubuntu-bg: hwb(16 13% 9% / 0.25);
+      --color-ubuntu-bg: lch(56.93% 81.53 46.27 / 0.25);
+      --color-ubuntu-bg: oklch(64.26% 0.193 38.26 / 0.25);
+      --color-ubuntu: hwb(16 13% 9%);
+      --color-ubuntu: lch(56.93% 81.53 46.27);
+      --color-ubuntu: oklch(64.26% 0.193 38.26);
+
+    /* MASTODON */
+      --color-mastodon-bg: hwb(205 17% 14% / 0.25);
+      --color-mastodon-bg: lch(57.02% 47.26 257.96 / 0.25);
+      --color-mastodon-bg: oklch(63.31% 0.142 245.03 / 0.25);
+      --color-mastodon: hwb(205 17% 14%);
+      --color-mastodon: lch(57.02% 47.26 257.96);
+      --color-mastodon: oklch(63.31% 0.142 245.03);
+
+    /* HUBZILLA */
+      --color-hubzilla-bg: hwb(236 26% 46% / 0.25);
+      --color-hubzilla-bg: lch(32.44% 40.76 289 / 0.25);
+      --color-hubzilla-bg: oklch(42.87% 0.109 277.68 / 0.25);
+      --color-hubzilla: hwb(236 26% 46%);
+      --color-hubzilla: lch(32.44% 40.76 289);
+      --color-hubzilla: oklch(42.87% 0.109 277.68);
+
+    /* CGM */
+      --color-cgm-bg: hwb(240 50% 0% / 0.25);
+      --color-cgm-bg: lch(58.2% 69.76218893179288 291.8265434122234 / 0.25);
+      --color-cgm-bg: oklch(66.01% 0.184 280.08 / 0.25);
+      --color-cgm: hwb(240 50% 0%);
+      --color-cgm: lch(58.2% 69.76218893179288 291.8265434122234);
+      --color-cgm: oklch(66.01% 0.184 280.08);
+
+  }
+
+  :root, html, body, *,
+  :root[lang], html[lang], body[lang], *[lang] {
+    -webkit-hyphens: none;
+        -ms-hyphens: none;
+            hyphens: none; /* Browser hyphenation algorithm is incorrect. Turn-off globally. */
+    word-wrap: break-word; /* But keep word-wrap "on" to allow wrapping of very long words. */
+  }
+  article, section,
+  header, footer,
+  details, summary {
+    /* content-visibility: auto; */
+    /* contain-intrinsic-size: auto; */
+  }
+  abbr {
+    cursor: help;
+  }
+  address {
+    display: inline-block;
+    font-style: normal;
+  }
+/*************************
+** END: Global Settings **
+*************************/
+
+/******************************************************************************/
+/******************************************************************************/
+
+/************************
+** BGN: COMMON CLASSES **
+************************/
+  /*** BGN: Alignments ***/
+    html body {
+      .grid_center.grid_center.grid_center {
+        margin-left: auto;
+        margin-right: auto;
+        -webkit-margin-start: auto;
+        margin-inline-start: auto;
+        -webkit-margin-end: auto;
+        margin-inline-end: auto;
+      }
+
+      .img_center.img_center.img_center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        -webkit-margin-start: auto;
+        margin-inline-start: auto;
+        -webkit-margin-end: auto;
+        margin-inline-end: auto;
+      }
+
+      .txt_center.txt_center.txt_center {
+        text-align: center;
+      }
+
+      .txt_left.txt_left.txt_left {
+        text-align: left;
+      }
+
+      .txt_right.txt_right.txt_right {
+        text-align: right;
+      }
+
+      .txt_justify.txt_justify.txt_justify {
+        text-align: justify;
+      }
+
+      .float_left.float_left.float_left {
+        float: left;
+      }
+
+      .float_right.float_right.float_right {
+        float: right;
+      }
+
+      figure {
+        &.float_left.float_left.float_left {
+          margin: 0 10px 5px 0;
+        }
+
+        &.float_right.float_right.float_right {
+          margin: 0 0 5px 10px;
+        }
+      }
+
+      .float_clear, .float_both_clear {
+        clear: both;
+      }
+
+      .float_left_clear {
+        clear: left;
+      }
+
+      .float_right_clear {
+        clear: right;
+      }
+    }
+  /*** END: Alignments ***/
+
+  /*** BGN: Yuki footer ***/
+    .global_footer {
+      align-items: end;
+      display: -ms-grid;
+      display: grid;
+      grid-gap: 0.35rem;
+      grid-template-areas:  "best_viewed best_viewed best_viewed"
+                            "menu_footer menu_footer menu_footer"
+                            ". cc_icons ."
+                            "ypub copyleft gfiles";
+      -ms-grid-columns: auto 0.35rem 8fr 0.35rem auto;
+      grid-template-columns: auto 8fr auto;
+      -ms-grid-rows: auto 0.35rem auto 0.35rem auto 0.35rem auto;
+      grid-template-rows: repeat(4, auto);
+
+      div {
+        &.best_viewed {
+          -ms-grid-row: 1;
+          -ms-grid-column: 1;
+          -ms-grid-column-span: 5;
+          grid-area: best_viewed;
+          /*
+          grid-column-start: 1;
+          grid-column-end: span end;
+          grid-row: 1;
+          */
+        }
+
+        &.menu_footer {
+          -ms-grid-row: 3;
+          -ms-grid-column: 1;
+          -ms-grid-column-span: 5;
+          grid-area: menu_footer;
+          /*
+          grid-column-start: 1;
+          grid-column-end: span end;
+          grid-row: 2;
+          */
+        }
+
+        &.cc_icons {
+          -ms-grid-row: 5;
+          -ms-grid-column: 3;
+          grid-area: cc_icons;
+          /*
+          grid-column-start: 1;
+          grid-column-end: span end;
+          grid-row: 3;
+          */
+        }
+
+        &.ypub {
+          -ms-grid-row: 7;
+          -ms-grid-column: 1;
+          grid-area: ypub;
+          /*
+          grid-row: 4;
+          justify-self: start;
+          */
+        }
+
+        &.copyleft {
+          -ms-grid-row: 7;
+          -ms-grid-column: 3;
+          grid-area: copyleft;
+          /*
+          grid-row: 4;
+          */
+        }
+
+        &.gfiles {
+          -ms-grid-row: 7;
+          -ms-grid-column: 5;
+          grid-area: gfiles;
+          /*
+          grid-row: 4;
+          justify-content: end;
+          */
+        }
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      /* HACK: hackish but this is the easiest way to update the browser versions */
+      > div.best_viewed > b {
+        &:nth-child(2) > a::after {
+          content: " 86+";
+        }
+
+        &:nth-child(4) > a::after {
+          content: " 29+";
+        }
+      }
+    }
+
+    /* Copyleft */
+    .gfiles, .copyleft {
+      -webkit-text-decoration-line: none;
+              text-decoration-line: none;
+
+      a {
+        -webkit-text-decoration-line: none;
+                text-decoration-line: none;
+      }
+    }
+  /*** END: Yuki footer ***/
+/************************
+** END: COMMON CLASSES **
+************************/
+
+/*************************
+** BGN: Ruby Annotation **
+*************************/
+  /**
+    * As of 2023-02-27.
+    *
+    * We are declaring most of these due to lack of support in browsers.
+    * Once CSS Ruby is fully supported, we can remove these base declarations.
+    *
+    * See:
+    *   1. https://www.w3.org/TR/css-ruby-1/
+    *   2. https://www.w3.org/TR/html-ruby-extensions/
+    *   3. https://www.w3.org/International/articles/ruby/markup.en
+  **/
+  ruby {
+    display: ruby;
+    ruby-merge: separate;
+    ruby-overhang: auto;
+  }
+  span.ruby-base-container,
+  rbc { /* In W3C Working Draft but not in major browsers. */
+    display: ruby-base-container;
+  }
+  span.ruby-base,
+  rb { /* Highly recommended by the W3C, but the HTML5 WG marked this as deprecated (this MUST be corrected). */
+    display: ruby-base;
+    white-space: nowrap;
+  }
+  span.ruby-text-container,
+  rtc { /* Very useful for multilingual Asian websites, but the HTML5 WG marked this as deprecated (this MUST be corrected). */
+    display: ruby-text-container;
+  }
+  rp { /* For fallback parentheses only. */
+    display: none;
+  }
+  span.ruby-text,
+  rt { /* Annotation */
+    display: ruby-text;
+  }
+
+  span.ruby-base-container, span.ruby-base,
+  span.ruby-text-container, span.ruby-text,
+  ruby,
+  rbc, rb
+  rtc, rt {
+    unicode-bidi: -webkit-isolate;
+    unicode-bidi: -moz-isolate;
+    unicode-bidi: isolate;
+  }
+  span.ruby-text-container, span.ruby-text,
+  rtc, rt {
+    font-variant-east-asian: ruby;
+    line-height: 1;
+    text-align: center; /* Webkit and Blink/Chromium-based browsers are keeping us in the Dark Ages, like IE used to be, for not supporting ruby-align. */
+    ruby-align: center; /* better presentation */
+    -webkit-text-emphasis: none;
+            text-emphasis: none;
+    text-transform: full-size-kana;
+    white-space: nowrap;
+  }
+  /* suggested by W3C
+  span.ruby-text-container,
+  :not(span.ruby-text-container) > span.ruby-text,
+  :not(span.ruby-text-container) > rt,
+  rtc,
+  :not(rtc) > span.ruby-text,
+  :not(rtc) > rt {
+    font-size: 67%;
+  }
+  rtc:lang(zh-TW),
+  :not(rtc) > rt:lang(zh-TW),
+  :not(rtc) > span.ruby-text:lang(zh-TW),
+  rtc:lang(zh-Hanb),
+  :not(rtc) > rt:lang(zh-Hanb),
+  :not(rtc) > span.ruby-text:lang(zh-Hanb) {
+    font-size: 30%;
+  }
+  */
+  span.ruby-text span.ruby-text,
+  rt rt {
+    font-size: 0.9em;
+  }
+
+  /* Let's add some colours, because we can! */
+  /* Works for Tabular and Interleaved models. */
+  /* RUBY BASE */
+  /*
+  span.ruby-base,
+  rb {
+    color: purple;
+  }
+  */
+
+  /* RUBY OVER */
+    ruby > ruby > rt,
+    ruby > ruby > rt > ruby > span.ruby-base,
+    ruby > ruby > rt > ruby > rb,
+    ruby > span.ruby-text-container:nth-of-type(odd) > rt,
+    ruby > span.ruby-text-container:nth-of-type(odd) > rt > ruby > rb,
+    ruby > rtc:nth-of-type(odd) > rt,
+    ruby > rtc:nth-of-type(odd) > rt > ruby > rb
+    {
+      color: var(--color-green);
+    }
+  /* RUBY BELOW */
+    ruby > rt,
+    ruby > rt > ruby > span.ruby-base,
+    ruby > rt > ruby > rb,
+    ruby > span.ruby-text-container:nth-of-type(even) > rt,
+    ruby > span.ruby-text-container:nth-of-type(even) > rt > ruby > rb,
+    ruby > rtc:nth-of-type(even) > rt,
+    ruby > rtc:nth-of-type(even) > rt > ruby > rb
+    {
+      /* RUBY BELOW */
+      color: var(--color-blue);
+    }
+  /* RUBY OVER OVER and RUBY BELOW BELOW */
+  ruby > rt > ruby > rt,
+  ruby > span.ruby-text-container:nth-of-type(odd) > rt > ruby > rt,
+  ruby > span.ruby-text-container:nth-of-type(even) > rt > ruby > rt,
+  ruby > rtc:nth-of-type(odd) > rt > ruby > rt,
+  ruby > rtc:nth-of-type(even) > rt > ruby > rt
+  {
+    color: var(--color-red);
+  }
+
+  /* applies in <ruby> */
+  .ruby-alternate { /* initial value */
+    ruby-position: alternate;
+  }
+  .ruby-over { /* default setting in major browsers */
+    ruby-position: over;
+  }
+  .ruby-under {
+    ruby-position: under;
+  }
+  .ruby-intercharacter {
+    ruby-position: inter-character;
+  }
+
+  /* applies in <rbc>, <rb>, <rtc>, and <rt> */
+  .ruby-spacearound { /* initial value, declared in case we need override */
+    ruby-align: space-around;
+  }
+  .ruby-center { /* our default for better presentation */
+    ruby-align: center;
+  }
+  .ruby-spacebetween {
+    ruby-align: space-between;
+  }
+  .ruby-start {
+    ruby-align: start;
+  }
+
+  .ruby-guide {
+    border: 1px dotted;
+  }
+/*************************
+** END: Ruby Annotation **
+*************************/
+
+/*********************************************************
+** BGN: Additional styles for Fork Awesome and cc-icons **
+*********************************************************/
+  /* BGN: Sizes */
+    .fa-xs, .cc-xs { font-size: .75em; }
+    .fa-sm, .cc-sm { font-size: .875em; }
+    .fa-1x, .cc-1x { font-size: 1em; }
+    .fa-2x, .cc-2x { font-size: 2em; }
+    .fa-3x, .cc-3x { font-size: 3em; }
+    .fa-4x, .cc-4x { font-size: 4em; }
+    .fa-5x, .cc-5x { font-size: 5em; }
+    .fa-6x, .cc-6x { font-size: 6em; }
+    .fa-7x, .cc-7x { font-size: 7em; }
+    .fa-8x, .cc-8x { font-size: 8em; }
+    .fa-9x, .cc-9x { font-size: 9em; }
+    .fa-10x, .cc-10x { font-size: 10em; }
+  /* END: Sizes */
+
+  /* Remove underlines */
+  html > body .cc_icons > a {
+    text-decoration: none;
+    border-bottom: none
+  }
+/*********************************************************
+** END: Additional styles for Fork Awesome and cc-icons **
+*********************************************************/
+
+/*******************************
+** BGN: embedresponsively.com **
+*******************************/
+  /*
+   * .embed-container is too generic, causing conflicts elsewhere
+   *   Changed to .responsive_embedframe
+   *   Old: .rspnsv-embedframe
+   *
+   * <div class="responsive_embedframe"><iframe anonymous src="https://www.youtube-nocookie.com/embed/" sandbox="allow-same-origin allow-scripts" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen"></iframe></div>
+   */
+  .rspnsv-embedframe, .responsive_embedframe {
+    /* content-visibility: auto; */
+    /* contain-intrinsic-size: auto; */
+    position: relative;
+    padding-bottom: 56.25%; /* YouTube, Vimeo, Dailymotion, Google Maps, Generic */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .rspnsv-embedframe.instagram, .responsive_embedframe.instagram {
+    padding-bottom: 120%; /* Instagram */
+  }
+
+  .rspnsv-embedframe.vine, .responsive_embedframe.vine {
+    padding-bottom: 100%; /* Vine */
+  }
+
+  .rspnsv-embedframe.gettyimages, .responsive_embedframe.gettyimages {
+    padding-bottom: 79.96632996632997%; /* Getty Images */
+  }
+
+  .rspnsv-embedframe.generic2, .responsive_embedframe.generic2 {
+    position: relative;
+    padding-bottom: initial; /* Generic2 */
+    /* height: 0; */
+    overflow: hidden;
+    max-width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .rspnsv-embedframe, .responsive_embedframe {
+    iframe, object, embed {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+/*******************************
+** END: embedresponsively.com **
+*******************************/
+
+/******************************************************************************/
+/******************************************************************************/
+
+/*******************
+** BGN: ACCORDION **
+*******************/
+  /* Usually used for FAQ and spoilers; show/hide */
+  details.style01 {
+    border: 1px solid;
+    border-radius: 7px;
+    box-shadow: 1px 1px 1px;
+    margin: 10px 0;
+    padding: 0.5em 0;
+
+    &[open] > summary {}
+
+    > {
+      summary {
+        display: list-item;
+        font-weight: bold;
+        list-style-position: inside;
+        cursor: pointer;
+        margin: 0;
+        padding: 0 0.5em;
+
+        &.faq::marker {
+          color: var(--color-red);
+          content: "Q: ";
+          font-weight: bold;
+        }
+      }
+
+      div {
+        display: inline-block;
+        margin: 0.7em 0 0 0;
+        padding: 0 1.7em;
+
+        &.faq > p:first-of-type {
+          display: list-item;
+          list-style-position: inside;
+
+          &::marker {
+            color: var(--color-blue);
+            content: "A: ";
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+
+  /* Interviews; show/hide */
+  details.style02 {
+    border: 1px solid;
+    border-radius: 7px;
+    box-shadow: 1px 1px 1px;
+    margin: 10px 0;
+    padding: 0.5em 0;
+
+    &[open] > summary {}
+
+    > {
+      summary {
+        display: list-item;
+        font-weight: bold;
+        list-style-position: inside;
+        cursor: pointer;
+        margin: 0;
+        padding: 0 0.5em;
+
+        &.faq::marker {
+          color: var(--color-red);
+          content: "Q: ";
+          font-weight: bold;
+        }
+      }
+
+      div {
+        display: inline-block;
+        margin: 0.7em 0 0 0;
+        padding: 0 1.7em;
+
+        &.faq {
+          /* width: 100%; */
+
+          > p:first-of-type {
+            display: list-item;
+            list-style-position: inside;
+
+            &::marker {
+              color: var(--color-blue);
+              content: "A: ";
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  :lang(ja) details > {
+    summary.faq::marker {
+      color: var(--color-red);
+      content: "質問： ";
+      font-weight: bold;
+    }
+
+    div.faq > p:first-of-type::marker {
+      color: var(--color-blue);
+      content: "答え： ";
+      font-weight: bold;
+    }
+  }
+
+  :lang(ko) details > {
+    summary.faq::marker {
+      color: var(--color-red);
+      content: "문제: ";
+      font-weight: bold;
+    }
+
+    div.faq > p:first-of-type::marker {
+      color: var(--color-blue);
+      content: "답변: ";
+      font-weight: bold;
+    }
+  }
+/*******************
+** END: ACCORDION **
+*******************/
+
+/*********************
+** BGN: Attribution **
+*********************/
+  /** Notes
+    ****************************************************************************
+    * I. blockquote, code, and anything "quoted" which is directly related to the article
+    *     see: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figure
+    *
+      <figure class="quote_box">
+        <blockquote>
+          <p>Long quote</p>
+          <p>Long quote</p>
+        </blockquote>
+
+        <figcaption class="attribution_name txt_right">
+          <p><cite>Source title</cite> by Author name</p>
+        </figcaption>
+      </figure>
+    ****************************************************************************
+    * II. If the image is related to the article like a gallery
+    *       * replace with <aside> as needed
+    *           * then replace figcaption with footer
+    *
+      <figure class="figure_box">
+        <div>
+          <img loading="lazy" src="image.webp">
+          <img loading="lazy" src="image.webp">
+        </div>
+
+        <figcaption class="attribution_caption txt_center">
+          <p><small>Image attribution</small></p>
+        </figcaption>
+      </figure>
+    ****************************************************************************
+    * III. If the image is not related to the article
+    *
+      <div class="figure_box">
+        <div>
+          <img loading="lazy" src="image.webp">
+          <img loading="lazy" src="image.webp">
+        </div>
+
+        <footer class="attribution_caption txt_center">
+          <p><small>Image attribution</small></p>
+        </footer>
+      </div>
+    ****************************************************************************
+    * IV. Header image/video attribution
+    *
+      <div class="header_attribution">
+        <footer class="attribution_caption">
+          <p><small>Image attribution</small></p>
+        </footer>
+      </div>
+    ****************************************************************************
+  **/
+  html body {
+    .quote_box, .figure_box {
+      /* content-visibility: auto; */
+      /* contain-intrinsic-size: auto; */
+    }
+
+    /* BGN: Remove browser and theme styles */
+      figure.quote_box.quote_box.quote_box, aside.quote_box.quote_box.quote_box, div.quote_box.quote_box.quote_box,
+      aside.figure_box, div.figure_box,
+      .attribution_name > p, .attribution_copyright > p,
+      .caption_txt > p {
+        margin: 0;
+        padding: 0;
+        text-align: unset;
+      }
+
+      figure, aside, div {
+        &.quote_box.quote_box.quote_box > {
+          div, blockquote {
+            background-color: unset;
+            border: initial;
+            color: unset;
+            font-size: unset;
+            font-style: unset;
+            line-height: normal;
+            width: initial;
+
+            &::before, &::after {
+              content: unset;
+            }
+          }
+        }
+      }
+    /* END: Remove browser and theme styles */
+
+    /* BGN: Add margins */
+      figure.quote_box.quote_box.quote_box, aside.quote_box.quote_box.quote_box, div.quote_box.quote_box.quote_box, aside.figure_box, div.figure_box {
+        margin: 1rem auto; /* Margin between blockquotes and center */
+        padding: 0 2rem;
+      }
+
+      figure, aside, div {
+        &.quote_box.quote_box.quote_box > {
+          div, blockquote {
+            margin: 1rem; /* margin of text inside */
+            padding: 0;
+            position: relative;
+          }
+        }
+      }
+    /* END: Add margins */
+
+    .attribution_name > p::before {
+      content: "\2015"; /* horizontal bar; quotation dash as per https://unicode.org/charts/PDF/U2000.pdf */
+    }
+
+    .attribution_copyright, .caption_txt {
+      color: unset;
+      line-height: normal;
+      margin-bottom: 23px;
+
+      > p > small {
+        /* font-size: 0.84rem; */
+        font-size: 0.73em;
+        /* font-size: x-small; */
+      }
+    }
+  }
+
+  /* BGN: .quote_box Styles */
+    /** Notes
+      * .quote_box Styles
+          * qbs_generic
+          * qbs_stanza
+          * qbs_verse01
+          * qbs_interview
+      *
+      * .quote_box Quotation Marks
+          * qbm_doublequotationmark
+      *
+      * .quote_box Blockquote Colours
+          * qbc_cgm
+          * qbc_grey-light
+          * qbc_silver
+          * qbc_white
+          * qbc_red
+          * qbc_lime
+          * qbc_green
+          * qbc_indigo-dye
+          * qbc_bluemidnight
+          * qbc_blue
+          * qbc_aqua, qbc_cyan
+          * qbc_fuchsia, qbc_magenta
+          * qbc_yellow
+          * qbc_orange
+          * qbc_gold
+          * qbc_pink
+          * qbc_brown
+          * qbc_brown-medium-dark
+          * qbc_facebook
+          * qbc_twitter
+          * qbc_googleplus
+          * qbc_ubuntu
+          * qbc_mastodon
+          * qbc_hubzilla
+    **/
+
+    /* BGN: .quote_box Styles */
+      /* BGN: set our own style */
+        html body .quote_box.qbs_generic,
+        html body .figure_box.qbs_generic {
+          border-radius: 10px;
+          border-style: double;
+          border-width: 4px;
+          margin: 1rem auto;
+          padding-left: 2.44rem;
+          padding-right: 2.44rem;
+          position: relative;
+          quotes: '\201C' '\201D' '\2018' '\2019';
+          width: 80%;
+        }
+        /** TODO: CREATE A NEW STYLE
+          *
+          * Currently mostly a copy of .qbs_generic
+          *
+        **/
+        html body .quote_box.qbs_stanza,
+        html body .figure_box.qbs_stanza {
+          border-radius: 10px;
+          border-style: dotted;
+          border-width: 4px;
+          margin: 1rem auto;
+          padding-left: 2.44rem;
+          padding-right: 2.44rem;
+          position: relative;
+          quotes: '\201C' '\201D' '\2018' '\2019';
+          width: 67%;
+        }
+        html body .quote_box.qbs_verse01,
+        html body .figure_box.qbs_verse01 {
+          /* border-radius: 0.5rem 1.7rem 0.5rem 1.7rem; */
+          border-radius: 5px 17px 5px 17px;
+          border-style: dashed;
+          border-width: 4px;
+          box-shadow: hwb(0 0% 100% / 50%) 7px 7px;
+          margin: 1rem auto;
+          padding-left: 2.44rem;
+          padding-right: 2.44rem;
+          position: relative;
+          quotes: '\201C' '\201D' '\2018' '\2019';
+          width: 80%;
+        }
+        html body .quote_box.qbs_interview,
+        html body .figure_box.qbs_interview {
+          border-radius: 10px;
+          border-style: double;
+          border-width: 4px;
+          margin: 1rem auto;
+          padding-left: 2.44rem;
+          padding-right: 2.44rem;
+          position: relative;
+          quotes: '\201C' '\201D' '\2018' '\2019';
+          width: auto;
+        }
+      /* END: set our own style */
+    /* END: .quote_box Styles */
+
+    /* BGN: .quote_box Quotation Marks */
+      html body .qbm_doublequotationmark.qbm_doublequotationmark.qbm_doublequotationmark.qbm_doublequotationmark::before,
+      html body .qbm_doublequotationmark.qbm_doublequotationmark.qbm_doublequotationmark.qbm_doublequotationmark::after {
+        /* Let's leave the styling to the theme for now.
+          color: hwb(0deg 48% 52% / 100%);
+          color: lch();
+          color: oklch();
+        */
+        font-family: var(--font-serif-noto);
+        font-size: 3rem;
+        position: absolute;
+      }
+      html body .qbm_doublequotationmark.qbm_doublequotationmark.qbm_doublequotationmark.qbm_doublequotationmark::before {
+        content: open-quote;
+        left: -2rem;
+        top: -1.0rem;
+      }
+      html body .qbm_doublequotationmark.qbm_doublequotationmark.qbm_doublequotationmark.qbm_doublequotationmark::after {
+        content: close-quote;
+        bottom: -3rem;
+        right: -2rem;
+      }
+    /* END: .quote_box Quotation Marks */
+
+    /* BGN: .quote_box Colours */
+      /** Notes
+        * deep indigo ("blueviolet") - #8A2BE2 138, 43, 226
+        *   * brighter than pigment indigo
+        * pigment indigo ("indigo") - #4B0082 75, 0, 130
+        * indigo dye - #00416A 0, 65, 106
+        *   * actual color of the indigo dye
+        *   * greenish dark blue
+        *   * approximately "midnight-blue" - #191970 25, 25, 112
+        *       * similar to "navy" - #000080 0, 0, 128
+        * "darkblue" - #00008B 0, 0, 139
+      **/
+      /* BGN: Generic colours */
+        html body .quote_box.qbc_black,
+        html body .figure_box.qbc_black  {
+          background-color: var(--color-black-bg);
+          border-color: var(--color-black);
+        }
+        html body .quote_box.qbc_grey-light,
+        html body .figure_box.qbc_grey-light {
+          background-color: var(--color-grey-light-bg);
+          border-color: var(--color-grey-light);
+        }
+        html body .quote_box.qbc_silver,
+        html body .figure_box.qbc_silver {
+          background-color: var(--color-silver-bg);
+          border-color: var(--color-silver);
+        }
+        html body .quote_box.qbc_white,
+        html body .figure_box.qbc_white {
+          background-color: var(--color-white-bg);
+          border-color: var(--color-white);
+        }
+        html body .quote_box.qbc_red,
+        html body .figure_box.qbc_red {
+          background-color: var(--color-red-bg);
+          border-color: var(--color-red);
+        }
+        html body .quote_box.qbc_lime,
+        html body .figure_box.qbc_lime {
+          background-color: var(--color-lime-bg);
+          border-color: var(--color-lime);
+        }
+        html body .quote_box.qbc_green,
+        html body .figure_box.qbc_green {
+          background-color: var(--color-green-bg);
+          border-color: var(--color-green);
+        }
+        html body .quote_box.qbc_blue,
+        html body .figure_box.qbc_blue {
+          background-color: var(--color-blue-bg);
+          border-color: var(--color-blue);
+        }
+        html body .quote_box.qbc_indigo-dye,
+        html body .figure_box.qbc_indigo-dye {
+          background-color: var(--color-indigo-dye-bg);
+          border-color: var(--color-indigo-dye);
+        }
+        html body .quote_box.qbc_blue-midnight,
+        html body .figure_box.qbc_blue-midnight {
+          background-color: var(--color-blue-midnight-bg);
+          border-color: var(--color-blue-midnight);
+        }
+        html body .quote_box.qbc_aqua,
+        html body .figure_box.qbc_aqua {
+          background-color: var(--color-aqua-bg);
+          border-color: var(--color-aqua);
+        }
+        html body .quote_box.qbc_fuchsia,
+        html body .figure_box.qbc_fuchsia,
+        html body .quote_box.qbc_magenta,
+        html body .figure_box.qbc_magenta {
+          background-color: var(--color-magenta-bg);
+          border-color: var(--color-magenta);
+        }
+        html body .quote_box.qbc_yellow,
+        html body .figure_box.qbc_yellow {
+          background-color: var(--color-yellow-bg);
+          border-color: var(--color-yellow);
+        }
+        html body .quote_box.qbc_orange,
+        html body .figure_box.qbc_orange {
+          background-color: var(--color-orange-bg);
+          border-color: var(--color-orange);
+        }
+        html body .quote_box.qbc_gold,
+        html body .figure_box.qbc_gold {
+          background-color: var(--color-gold-bg);
+          border-color: var(--color-gold);
+        }
+        html body .quote_box.qbc_pink,
+        html body .figure_box.qbc_pink {
+          background-color: var(--color-pink-bg);
+          border-color: var(--color-pink);
+        }
+
+        html body .quote_box.qbc_brown,
+        html body .figure_box.qbc_brown {
+          background-color: var(--color-brown-bg);
+          border-color: var(--color-brown);
+        }
+        html body .quote_box.qbc_brown-medium-dark,
+        html body .figure_box.qbc_brown-medium-dark {
+          background-color: var(--color-brown-medium-dark-bg);
+          border-color: var(--color-brown-medium-dark);
+        }
+      /* END: Generic colours */
+
+      /* BGN: Brand colours */
+        html body .quote_box.qbc_facebook,
+        html body .figure_box.qbc_facebook {
+          background-color: var(--color-facebook-bg);
+          border-color: var(--color-facebook);
+        }
+        html body .quote_box.qbc_twitter,
+        html body .figure_box.qbc_twitter {
+          background-color: var(--color-twitter-bg);
+          border-color: var(--color-twitter);
+        }
+        html body .quote_box.qbc_googleplus,
+        html body .figure_box.qbc_googleplus {
+          background-color: var(--color-googleplus-bg);
+          border-color: var(--color-googleplus);
+        }
+        html body .quote_box.qbc_ubuntu,
+        html body .figure_box.qbc_ubuntu {
+          background-color: var(--color-ubuntu-bg);
+          border-color: var(--color-ubuntu);
+        }
+        html body .quote_box.qbc_mastodon,
+        html body .figure_box.qbc_mastodon {
+          background-color: var(--color-mastodon-bg);
+          border-color: var(--color-mastodon);
+        }
+        html body .quote_box.qbc_hubzilla,
+        html body .figure_box.qbc_hubzilla {
+          background-color: var(--color-hubzilla-bg);
+          border-color: var(--color-hubzilla);
+        }
+      /* END: Brand colours */
+
+      /* BGN: Special custom colours */
+        html body .quote_box.qbc_cm,
+        html body .figure_box.qbc_cm,
+        html body .quote_box.qbc_gm,
+        html body .figure_box.qbc_gm,
+        html body .quote_box.qbc_cgm,
+        html body .figure_boxx.qbc_cgm {
+          background-color: var(--color-cgm-bg);
+          border-color: var(--color-cgm);
+        }
+      /* END: Special custom colours */
+    /* END: .quote_box Colours */
+  /* END: .quote_box Styles */
+/*********************
+** END: Attribution **
+*********************/
+
+/**********************
+** BGN: Custom Lists **
+**********************/
+  /* remove list style */
+  .list-style-type-none {
+    list-style-type: none;
+  }
+
+  .note {
+    display: list-item;
+    list-style-position: inside;
+    font-size: smaller;
+
+    &::marker {
+      content: "Note：";
+    }
+  }
+
+  :lang(zh) .note::marker,
+  .note:lang(zh)::marker {
+    content: "註解：";
+  }
+  :lang(zh-Hans) .note::marker,
+  .note:lang(zh-Hans)::marker {
+    content: "注释：";
+  }
+
+  :lang(ja) .note::marker,
+  .note:lang(ja)::marker {
+    content: "注解：";
+  }
+
+  :lang(ko) .note::marker,
+  .note:lang(ko)::marker {
+    content: "주해：";
+  }
+
+  .notecounter {
+    display: list-item;
+    counter-increment: note-counter;
+    list-style-position: inside;
+    font-size: smaller;
+
+    &::marker {
+      content: "Note (" counter(note-counter) ")：";
+    }
+  }
+
+  :lang(zh) .notecounter::marker,
+  .notecounter:lang(zh)::marker {
+    content: "註解（" counter(note-counter, trad-chinese-informal) "）：";
+  }
+  :lang(zh-Hans) .notecounter::marker,
+  .notecounter:lang(zh-Hans)::marker {
+    content: "注释（" counter(note-counter, simp-chinese-informal) "）：";
+  }
+
+  :lang(ja) .notecounter::marker,
+  .notecounter:lang(ja)::marker {
+    content: "注解（" counter(note-counter, japanese-informal) "）：";
+  }
+
+  :lang(ko) .notecounter::marker,
+  .notecounter:lang(ko)::marker {
+    content: "주해（" counter(note-counter, korean-hangul-formal) "）：";
+  }
+
+  ul {
+    &[class^="cul-"] {
+      display: list-item;
+      list-style-position: inside;
+    }
+
+    &.cul-checkmark-heavy {
+      content: "\2714";
+
+      /* heavy check mark */
+    }
+
+    &.cul-checkmark-light {
+      content: "\1F5F8";
+
+      /* light check mark */
+    }
+  }
+
+/**********************
+** END: Custom Lists **
+**********************/
+
+/*************************************************
+** BGN: Colours for Backgrounds, Lists, & Texts **
+*************************************************/
+  /*
+   * Colour override order (.list- & .text-)
+   *   red < green < blue < yellow < gold < magenta < pink
+   *
+   * Background (.list-bg-)
+   *   grey-light > silver
+   *
+   * Custom List Style element override order: UL-level < LI-level
+   */
+  /* Background Colours */
+  ol.custom_liststyle.list-bg-grey-light > li {
+    background-color: var(--color-grey-light);
+  }
+  ol.custom_liststyle.list-bg-silver > li {
+    background-color: var(--color-silver);
+  }
+
+  /* custom_liststyle: UL-level only */
+  /* BGN: Generic colours */
+    ul.custom_liststyle.list-black > li::before {
+      color: var(--color-black);
+    }
+    ul.custom_liststyle.list-white > li::before {
+      color: var(--color-white);
+    }
+    ul.custom_liststyle.list-red > li::before {
+      color: var(--color-red);
+    }
+    ul.custom_liststyle.list-lime > li::before {
+      color: var(--color-lime);
+    }
+    ul.custom_liststyle.list-green > li::before {
+      color: var(--color-green);
+    }
+    ul.custom_liststyle.list-blue > li::before {
+      color: var(--color-blue);
+    }
+    ul.custom_liststyle.list-aqua > li::before {
+      color: var(--color-aqua);
+    }
+    ul.custom_liststyle.list-fuchsia > li::before,
+    ul.custom_liststyle.list-magenta > li::before {
+      color: var(--color-magenta);
+    }
+    ul.custom_liststyle.list-yellow > li::before {
+      color: var(--color-yellow);
+    }
+    ul.custom_liststyle.list-orange > li::before {
+      color: var(--color-orange);
+    }
+    ul.custom_liststyle.list-gold > li::before {
+      color: var(--color-gold);
+    }
+    ul.custom_liststyle.list-pink > li::before {
+      color: var(--color-pink);
+    }
+    ul.custom_liststyle.list-brown > li::before {
+      color: var(--color-brown);
+    }
+    ul.custom_liststyle.list-brown-medium-dark > li::before {
+      color: var(--color-brown-medium-dark);
+    }
+  /* END: Generic colours */
+
+  /* BGN: Brand colours */
+    ul.custom_liststyle.list-facebook > li::before {
+      color: var(--color-facebook);
+    }
+    ul.custom_liststyle.list-twitter > li::before {
+      color: var(--color-twitter);
+    }
+    ul.custom_liststyle.list-googleplus > li::before {
+      color: var(--color-googleplus);
+    }
+    ul.custom_liststyle.list-ubuntu > li::before {
+      color: var(--color-ubuntu);
+    }
+    ul.custom_liststyle.list-mastodon > li::before {
+      color: var(--color-mastodon);
+    }
+    ul.custom_liststyle.list-hubzilla > li::before {
+      color: var(--color-hubzilla);
+    }
+  /* END: Brand colours */
+
+  /**
+    * Custom List Style notes:
+    *   1. To make colour override work in custom_liststyle
+    *       we have to separate the LI-level colours.
+    *   2. Chained classes for custom_liststyle is not an option.
+    *       It will color the text as well.
+    *
+    * TEXT colour note:
+    *   1. Generic class names like .red, .green, and .blue are not advisable.
+    *       These are too common, other CSS files might be using the same.
+  **/
+  /* BGN: Generic colours */
+    ul.custom_liststyle > li.list-black::before,
+    .text-black {
+      color: var(--color-black);
+    }
+    ul.custom_liststyle > li.list-white::before,
+    .text-white {
+      color: var(--color-white);
+    }
+    ul.custom_liststyle > li.list-red::before,
+    .text-red {
+      color: var(--color-red);
+    }
+    ul.custom_liststyle > li.list-lime::before,
+    .text-lime {
+      color: var(--color-lime);
+    }
+    ul.custom_liststyle > li.list-green::before,
+    .text-green {
+      color: var(--color-green);
+    }
+    ul.custom_liststyle > li.list-blue::before,
+    .text-blue {
+      color: var(--color-blue);
+    }
+    ul.custom_liststyle > li.list-aqua::before,
+    .text-aqua {
+      color: var(--color-aqua);
+    }
+    ul.custom_liststyle > li.list-fuchsia::before,
+    ul.custom_liststyle > li.list-magenta::before,
+    .text-fuchsia,
+    .text-magenta {
+      color: var(--color-magenta);
+    }
+    ul.custom_liststyle > li.list-yellow::before,
+    .text-yellow {
+      color: var(--color-yellow);
+    }
+    ul.custom_liststyle > li.list-orange::before,
+    .text-orange {
+      color: var(--color-orange);
+    }
+    ul.custom_liststyle > li.list-gold::before,
+    .text-gold {
+      color: var(--color-gold);
+    }
+    ul.custom_liststyle > li.list-pink::before,
+    .text-pink {
+      color: var(--color-pink);
+    }
+    ul.custom_liststyle > li.list-brown::before,
+    .text-brown {
+      color: var(--color-brown);
+    }
+    ul.custom_liststyle > li.list-brown-medium-dark::before,
+    .text-brown-medium-dark {
+      color: var(--color-brown-medium-dark);
+    }
+  /* END: Generic colours */
+
+  /* BGN: Brand colours */
+    ul.custom_liststyle > li.list-facebook::before,
+    .text-facebook {
+      color: var(--color-facebook);
+    }
+    ul.custom_liststyle > li.list-twitter::before,
+    .text-twitter {
+      color: var(--color-twitter);
+    }
+    ul.custom_liststyle > li.list-googleplus::before,
+    .text-googleplus {
+      color: var(--color-googleplus);
+    }
+    ul.custom_liststyle > li.list-ubuntu::before,
+    .text-ubuntu {
+      color: var(--color-ubuntu);
+    }
+    ul.custom_liststyle > li.list-mastodon::before,
+    .text-mastodon {
+      color: var(--color-mastodon);
+    }
+    ul.custom_liststyle > li.list-hubzilla::before,
+    .text-hubzilla {
+      color: var(--color-hubzilla);
+    }
+  /* END: Brand colours */
+
+  /* BGN: Special custom colours */
+    .text-cm, .text-gm, .text-cgm {
+      color: var(--color-cgm);
+      font-weight: bold;
+    }
+    .text-guide {
+      color: var(--color-red);
+      font-weight: bold;
+    }
+  /* END: Special custom colours */
+/*************************************************
+** END: Colours for Backgrounds, Lists, & Texts **
+*************************************************/
+
+/********************
+** BGN: webmention **
+********************/
+  #webmentions {
+    /* content-visibility: auto; */
+    /* contain-intrinsic-size: auto; */
+  }
+
+  #webmentions {
+    margin: 0;
+
+    h2 {
+      font-size: medium;
+      /* margin-top: 0; */
+      padding: 2px;
+    }
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 4px;
+    }
+
+    li.reaction_mention {
+      /* margin: 123px; */
+      display: inline-block;
+    }
+
+    a {
+      border-bottom: none;
+
+      &.reaction {
+        /* margin: 123px; */
+
+        img {
+          border-radius: 25%;
+          text-decoration: none;
+        }
+
+        sub {
+          font-size: 50%;
+        }
+      }
+    }
+
+    .reacts {
+      img {
+        display: inline-block;
+        margin: 3px -1ex 1px 0;
+      }
+
+      a.reaction {
+        img {
+          max-height: 2.0em;
+        }
+
+        .emoji {
+          font-size: 1.1em;
+          margin-left: -5px;
+          vertical-align: text-bottom;
+        }
+      }
+    }
+
+    .comments {
+      /* margin: 123px; */
+
+      li {
+        /* margin: 123px; */
+
+        .name, .text {
+          text-indent: -1.2em;
+          /* padding-left: 3em; */
+        }
+      }
+
+      a.reaction {
+        img {
+          max-height: 3.0em;
+        }
+
+        .emoji {
+          font-size: 1.3em;
+        }
+      }
+    }
+  }
+
+  /* BGN: Speech bubble style-01 by https://codepen.io/rikschennink/pen/mjywQb */
+    #webmentions .comments li .text {
+      /* layout */
+      position: relative;
+      max-width: 90%;
+      margin-left: 5%;
+
+      /* looks */
+      /* background-color: #fff; */
+      padding: 1.125em 2.5em;
+      border-radius: 1rem;
+      box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.3), 0 0.0625rem 0.125rem rgba(0, 0, 0, 0.2);
+
+      &::before {
+        /* layout */
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 0;
+        bottom: 100%;
+        left: 2.4em;
+
+        /* offset should move with padding of parent */
+        border: .75rem solid transparent;
+        border-top: none;
+
+        /* looks */
+        /* border-bottom-color: #fff; */
+        -webkit-filter: drop-shadow(0 -0.0625rem 0.0625rem rgba(0, 0, 0, 0.1));
+                filter: drop-shadow(0 -0.0625rem 0.0625rem rgba(0, 0, 0, 0.1));
+      }
+    }
+  /* END: Speech bubble style-01 */
+
+/********************
+** BGN: webmention **
+********************/
+
+/********************
+** BGN: Link icons **
+********************/
+  [class^="icon_"]::after {
+    display: inline-block;
+    text-decoration: none;
+    white-space: pre-wrap;
+    margin-left: 0.25em;
+    width: 1em;
+  }
+  .icon_external::after     { content: "\1F517";                                    /* 🔗 */ }
+
+  .icon_chat::after         { content: "\1F4AC";                                    /* 💬 */ }
+  .icon_ftp::after          { content: "\2194\FE0F";                                /* ↔️ */ }
+  .icon_magnet::after       { content: "\1F9F2";                                    /* 🧲 */ }
+  .icon_mail::after         { content: "\1F4E7";                                    /* 📧 */ }
+  .icon_remote::after       { content: "\1F4BB";                                    /* 💻 */ }
+  .icon_tel::after          { content: "\260E\FE0F";                                /* ☎️ */ }
+
+  .icon_books::after        { content: "\1F4D6";                                    /* 📖 */ }
+  .icon_document::after     { content: "\1F4C4";                                    /* 📄 */ }
+  .icon_text::after         { content: "\1F4DD";                                    /* 📝 */ }
+  .icon_presentation::after { content: url("../fonts/link-icons-presentation.svg"); /* https://openclipart.org/detail/36505/tango-x-office-presentation */ }
+  .icon_spreadsheet::after  { content: url("../fonts/link-icons-spreadsheet.svg");  /* https://openclipart.org/detail/36517/tango-x-office-spreadsheet */ }
+
+  .icon_audio::after        { content: "\1F3B5";                                    /* 🎵 */ }
+  .icon_video::after        { content: "\1F4FD\FE0F";                               /* 📽️ */ }
+  .icon_subtitle::after     { content: url("../fonts/link-icons-subtitle.svg");     /* https://openclipart.org/detail/212110/mimetype-subtitle */ }
+
+  .icon_executable::after   { content: url("../fonts/link-icons-executable.svg");   /* https://openclipart.org/detail/212161/mimetype-binary */ }
+  .icon_scripts::after      { content: url("../fonts/link-icons-scripts.svg");      /* https://openclipart.org/detail/36175/tango-text-x-script */ }
+
+  .icon_fonts::after        { content: url("../fonts/link-icons-fonts.svg");        /* https://openclipart.org/detail/35257/tango-preferences-desktop-font */ }
+  .icon_compressed::after   { content: "\1F5DC\FE0F";                               /* 🗜️ */ }
+  .icon_diskimage::after    { content: "\1F4BD";                                    /* 💽 */ }
+  .icon_imagediting::after  { content: url("../fonts/link-icons-imageediting.svg"); /* https://openclipart.org/detail/231061/artists-brush-and-paint */ }
+/********************
+** END: Link icons **
+********************/
+
+/****************
+** BGN: Badges **
+****************/
+  [class^="badges-"][class^="badges-"] {
+    display: list-item;
+    list-style: none;
+    list-style-position: inside;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+
+    span {
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  .badges-content.badges-content span {
+    display: inline-block;
+    margin-left: 0.1rem;
+    margin-right: 0.2rem;
+  }
+  .badges-footer.badges-footer span {
+    display: inline-block;
+    margin-left: 0.1rem;
+    margin-right: 0.2rem;
+  }
+/****************
+** END: Badges **
+****************/
+
+/*************
+** BGN: kbd **
+*************/
+  /* Source: https://github.com/auth0/kbd
+   * License: MIT License
+   *
+   * By: auth0 https://github.com/auth0
+  */
+  kbd {
+    display: inline-block;
+    border-radius: 3px;
+    padding: 0px 4px;
+    box-shadow: 1px 1px 1px #777;
+    margin: 2px;
+    font-size: small;
+    vertical-align: text-bottom;
+    background-color: hwb(0 93% 7%);
+    background-color: lch(94.098% 0 139.088);
+    background-color: oklch(94.91% 0 0);
+    font-weight: 500;
+    color: hwb(0 33% 67%);
+    color: lch(36.146% 0 139.088);
+    color: oklch(44.95% 0 0);
+    cursor: pointer;
+    font-variant: small-caps;
+    font-weight: 600;
+
+    /* This two work */
+    /* letter-spacing: 0.5px; */
+    letter-spacing: 1px;
+
+
+    /* Prevent selection */
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  kbd:hover,
+  kbd:hover * {
+    color: var(--color-black);
+    /* box-shadow: 1px 1px 1px #333; */
+  }
+
+  kbd:active,
+  kbd:active * {
+    color: var(--color-black);
+    box-shadow: 1px 1px 0px #ddd inset;
+  }
+
+  kbd kbd {
+    padding: 0px;
+    margin: 0 1px;
+    box-shadow: 0px 0px 0px black;
+    vertical-align: baseline;
+    background: none;
+  }
+
+  kbd kbd:hover {
+    box-shadow: 0px 0px 0px black;
+  }
+
+  kbd:active kbd {
+    box-shadow: 0px 0px 0px black;
+    background: none;
+  }
+
+  /* Deep blue */
+  kbd.deep-blue,
+  .deep-blue kbd {
+    background-color: hwb(207.273 28% 29%);
+    background-color: lch(51.987% 33.881 255.712);
+    background-color: oklch(58.8% 0.099 245.74);
+    color: hwb(0 93% 7%);
+    color: lch(94.098% 0 139.088);
+    color: oklch(94.91% 0 0);
+  }
+
+  kbd.deep-blue:hover,
+  kbd.deep-blue:hover *,
+  .deep-blue kbd:hover {
+    color: var(--color-white);
+  }
+
+  /* Dark apple */
+  kbd.dark-apple,
+  .dark-apple kbd {
+    background-color: var(--color-black);
+    color: hwb(0 87% 13%);
+    color: lch(88.115% 0 139.088);
+    color: oklch(89.75% 0 0);
+  }
+
+  kbd.dark-apple:hover,
+  kbd.dark-apple:hover *,
+  .dark-apple kbd:hover {
+    color: var(--color-white);
+  }
+
+  /* Type writer */
+  kbd.type-writer,
+  .type-writer kbd {
+    border-radius: 10px;
+    background-color: hwb(0 20% 80%);
+    background-color: lch(21.247% 0 139.088);
+    background-color: oklch(32.11% 0 0);
+    color: var(--color-white);
+  }
+/*************
+** END: kbd **
+*************/
+
+div.highlight td:nth-child(2) pre {
+  width: 69%;
+}

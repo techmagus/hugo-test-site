@@ -6,59 +6,8 @@
     <description>최근 콘텐츠 켜짐 YourOnly.One&#39;s Hugo 테스트 사이트</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko</language>
-    <lastBuildDate>Tue, 22 Mar 2022 15:22:30 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 02 Jan 2006 15:04:05 +0900</lastBuildDate>
     <atom:link href="https://hugotest.youronly.one/ko/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>KO: &lt;reflangtitle&gt; shortcode 테스트 페이지</title>
-      <link>https://hugotest.youronly.one/ko/reflangtitle-test-202281/</link>
-      <pubDate>Tue, 22 Mar 2022 15:22:30 +0900</pubDate>
-      <guid>https://hugotest.youronly.one/ko/reflangtitle-test-202281/</guid>
-      <description>&lt;p&gt;Create a link of a &lt;code&gt;ref&lt;/code&gt;-erenced file with the actual title pulled automatically; and with multilingual support.&lt;/p&gt;
-&lt;h2 id=&#34;how-to-use&#34;&gt;How to use&lt;/h2&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;This is {{&amp;lt; relref &amp;gt;}} expanded.&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;Syntax: {{&amp;lt; reflangtitle path=&amp;quot;&amp;quot; lang=&amp;quot;&amp;quot; &amp;gt;}}&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;ul&gt;
-&lt;li&gt;If &lt;code&gt;lang=&amp;quot;&amp;quot;&lt;/code&gt; is empty, or not defined, it will search under the same language as the current page.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;shortcode-file-layoutsshortcodesreflangtitlehtml&#34;&gt;Shortcode file: &lt;code&gt;/layouts/shortcodes/reflangtitle.html&lt;/code&gt;&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-golang&#34; data-lang=&#34;golang&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{{&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;$&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;path&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;:=&lt;/span&gt; .&lt;span style=&#34;color:#a6e22e&#34;&gt;Get&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;path&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;}}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{{&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;$&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;ref&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;relref&lt;/span&gt; . .&lt;span style=&#34;color:#a6e22e&#34;&gt;Params&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;}}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{{&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;with&lt;/span&gt; .&lt;span style=&#34;color:#a6e22e&#34;&gt;Site&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;GetPage&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;$&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;path&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;}}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  {{&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;range&lt;/span&gt; .&lt;span style=&#34;color:#a6e22e&#34;&gt;AllTranslations&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;}}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    {{ &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;eq&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;$&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;ref&lt;/span&gt; .&lt;span style=&#34;color:#a6e22e&#34;&gt;RelPermalink&lt;/span&gt; }}&amp;lt;&lt;span style=&#34;color:#a6e22e&#34;&gt;a&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;href&lt;/span&gt;=&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;{{ .RelPermalink }}&amp;#34;&lt;/span&gt;&amp;gt;{{ .&lt;span style=&#34;color:#a6e22e&#34;&gt;Title&lt;/span&gt; }}&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;a&lt;/span&gt;&amp;gt;{{ &lt;span style=&#34;color:#66d9ef&#34;&gt;break&lt;/span&gt; }}{{ &lt;span style=&#34;color:#a6e22e&#34;&gt;end&lt;/span&gt; }}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  {{&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;end&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;}}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{{&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;end&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;}}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;examples&#34;&gt;Examples&lt;/h2&gt;
-&lt;h3 id=&#34;with-lang&#34;&gt;with &lt;code&gt;lang&lt;/code&gt;&lt;/h3&gt;
-&lt;p&gt;These codes:&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-golang&#34; data-lang=&#34;golang&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; {{&amp;lt; &lt;span style=&#34;color:#a6e22e&#34;&gt;reflangtitle&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;path&lt;/span&gt;=&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;reflangtitle-test.md&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;lang&lt;/span&gt;=&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;en-ph&amp;#34;&lt;/span&gt; &amp;gt;}}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; {{&amp;lt; &lt;span style=&#34;color:#a6e22e&#34;&gt;reflangtitle&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;path&lt;/span&gt;=&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;reflangtitle-test.md&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;lang&lt;/span&gt;=&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;ja&amp;#34;&lt;/span&gt; &amp;gt;}}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; {{&amp;lt; &lt;span style=&#34;color:#a6e22e&#34;&gt;reflangtitle&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;path&lt;/span&gt;=&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;reflangtitle-test.md&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;lang&lt;/span&gt;=&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;ko&amp;#34;&lt;/span&gt; &amp;gt;}}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;Will output:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://hugotest.youronly.one/reflangtitle-test-202281/&#34;&gt;EN-PH: &amp;lt;reflangtitle&amp;gt; shortcode test page&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://hugotest.youronly.one/ja/reflangtitle-test-202281/&#34;&gt;JA: &amp;lt;reflangtitle&amp;gt;shortcodeテストページ&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://hugotest.youronly.one/ko/reflangtitle-test-202281/&#34;&gt;KO: &amp;lt;reflangtitle&amp;gt; shortcode 테스트 페이지&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;empty-or-without-lang&#34;&gt;empty or without &lt;code&gt;lang&lt;/code&gt;&lt;/h3&gt;
-&lt;p&gt;These codes:&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-golang&#34; data-lang=&#34;golang&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; {{&amp;lt; &lt;span style=&#34;color:#a6e22e&#34;&gt;reflangtitle&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;path&lt;/span&gt;=&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;reflangtitle-test.md&amp;#34;&lt;/span&gt; &amp;gt;}}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; {{&amp;lt; &lt;span style=&#34;color:#a6e22e&#34;&gt;reflangtitle&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;path&lt;/span&gt;=&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;reflangtitle-test.md&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;lang&lt;/span&gt;=&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt; &amp;gt;}}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;Will output:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://hugotest.youronly.one/ko/reflangtitle-test-202281/&#34;&gt;KO: &amp;lt;reflangtitle&amp;gt; shortcode 테스트 페이지&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://hugotest.youronly.one/ko/reflangtitle-test-202281/&#34;&gt;KO: &amp;lt;reflangtitle&amp;gt; shortcode 테스트 페이지&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description>
-    </item>
     
     <item>
       <title>KO: timezone abbr with offset</title>

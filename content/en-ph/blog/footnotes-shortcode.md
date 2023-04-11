@@ -2,6 +2,7 @@
 title = "Footnotes in shortcodes"
 description = "test page for footnotes in shortcodes"
 date = 2023-04-10T10:18:00+08:00
+expirydate = 2023-04-12T06:05:00+08:00
 slug = "footnotes-shortcodes"
 translationKey = "footnotes-shortcodes"
 +++

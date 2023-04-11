@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://hugotest.youronly.one/blog/</loc>
-    <lastmod>2023-04-10T03:50:08+00:00</lastmod>
+    <lastmod>2023-04-11T22:06:24+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
@@ -20,29 +20,8 @@
                 href="https://hugotest.youronly.one/blog/"
                 />
   </url><url>
-    <loc>https://hugotest.youronly.one/footnotes-shortcodes-2023100/</loc>
-    <lastmod>2023-04-10T03:50:08+00:00</lastmod>
-  </url><url>
-    <loc>https://hugotest.youronly.one/</loc>
-    <lastmod>2023-04-10T03:50:08+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://hugotest.youronly.one/ja/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
-                href="https://hugotest.youronly.one/ko/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-ph"
-                href="https://hugotest.youronly.one/"
-                />
-  </url><url>
     <loc>https://hugotest.youronly.one/tz-abbr-test-offset-20062/</loc>
-    <lastmod>2023-04-10T03:50:08+00:00</lastmod>
+    <lastmod>2023-04-11T22:06:24+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
@@ -60,7 +39,7 @@
                 />
   </url><url>
     <loc>https://hugotest.youronly.one/tz-abbr-test-offset-no-20062/</loc>
-    <lastmod>2023-04-10T03:50:08+00:00</lastmod>
+    <lastmod>2023-04-11T22:06:24+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
@@ -75,6 +54,24 @@
                 rel="alternate"
                 hreflang="en-ph"
                 href="https://hugotest.youronly.one/tz-abbr-test-offset-no-20062/"
+                />
+  </url><url>
+    <loc>https://hugotest.youronly.one/</loc>
+    <lastmod>2023-04-11T22:06:24+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://hugotest.youronly.one/ja/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="https://hugotest.youronly.one/ko/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-ph"
+                href="https://hugotest.youronly.one/"
                 />
   </url><url>
     <loc>https://hugotest.youronly.one/categories/</loc>

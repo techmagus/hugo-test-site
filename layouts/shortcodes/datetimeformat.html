@@ -32,7 +32,7 @@
 </style>
 <h2>Format: 2006-01-02 15:04 MST</h2>
 <ul>
-  <li>&lt;html lang="{{ $.Site.LanguageCode }}"&gt;</li>
+  <li>&lt;html lang="{{ $.Site.Language.LanguageCode }}"&gt;</li>
   <li>frontmatter: {{ $frontmatter }}</li>
   <li>expected: {{ $expected }}</li>
   <li>
@@ -45,7 +45,7 @@
 
 <h2>Extra test: 2006-01-02 15:04Z07:00</h2>
 <ul>
-  <li>&lt;html lang="{{ $.Site.LanguageCode }}"&gt;</li>
+  <li>&lt;html lang="{{ $.Site.Language.LanguageCode }}"&gt;</li>
   <li>frontmatter: {{ $frontmatter }}</li>
   <li>expected: {{ $expected2 }}</li>
   <li>

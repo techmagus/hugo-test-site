@@ -6,12 +6,12 @@
 <ul class="navbar">
 {{ if .IsTranslated -}}
 {{ range .Translations }}
-<li><a rel="alternate" href="{{ .RelPermalink }}" hreflang="{{ .Site.LanguageCode }}" lang="{{ .Site.LanguageCode }}">{{ .Site.Language.LanguageName }}</a> {{ .Site.Params.languageflag }} </li>
+<li><a rel="alternate" href="{{ .RelPermalink }}" hreflang="{{ or (.Site.Language.LanguageCode) (.Site.Language.Lang) }}" lang="{{ or (.Site.Language.LanguageCode) (.Site.Language.Lang) }}">{{ .Site.Language.LanguageName }}</a> {{ .Site.Params.languageflag }} </li>
 {{ end -}}
 {{ else -}}
 {{ range site.Languages -}}
 {{ if ne site.Language.Lang .Lang }}
-<li><a rel="alternate" href="{{ .Lang | relURL }}" hreflang="{{ .Site.LanguageCode }}" lang="{{ .Site.LanguageCode }}">{{ .Site.Language.LanguageName }}</a> {{ .Site.Params.languageflag }} </li>
+<li><a rel="alternate" href="{{ .Lang | relURL }}" hreflang="{{ or (.Site.Language.LanguageCode) (.Site.Language.Lang) }}" lang="{{ or (.Site.Language.LanguageCode) (.Site.Language.Lang) }}">{{ .Site.Language.LanguageName }}</a> {{ .Site.Params.languageflag }} </li>
 {{ end -}}
 {{ end -}}
 {{ end -}}
@@ -23,12 +23,12 @@
 <ul class="navbar">site.Params:
   {{ if .IsTranslated -}}
     {{ range .Translations }}
-      <li><a href="{{ .Permalink }}" lang="{{ .Site.LanguageCode }}" title="{{ .Site.Language.LanguageName }}">{{ .Site.Language.LanguageName }}</a> {{ site.Params.languageflag }}</li>
+      <li><a href="{{ .Permalink }}" lang="{{ or (.Site.Language.LanguageCode) (.Site.Language.Lang) }}" title="{{ .Site.Language.LanguageName }}">{{ .Site.Language.LanguageName }}</a> {{ site.Params.languageflag }}</li>
     {{ end }}
   {{ else }}
     {{ range .Site.Languages }}
       {{ if ne .Lang $.Site.Language.Lang }}
-        <li><a href="{{ .Permalink }}" lang="{{ .Site.LanguageCode }}" title="{{ .Site.Language.LanguageName }}">{{ .Site.Language.LanguageName }}</a> {{ site.Params.languageflag }}</li>
+        <li><a href="{{ .Permalink }}" lang="{{ or (.Site.Language.LanguageCode) (.Site.Language.Lang) }}" title="{{ .Site.Language.LanguageName }}">{{ .Site.Language.LanguageName }}</a> {{ site.Params.languageflag }}</li>
       {{ end }}
     {{ end }}
   {{ end }}
@@ -37,12 +37,12 @@
 <ul class="navbar">.Site.Params:
   {{ if .IsTranslated -}}
     {{ range .Translations }}
-      <li><a href="{{ .Permalink }}" lang="{{ .Site.LanguageCode }}" title="{{ .Site.Language.LanguageName }}">{{ .Site.Language.LanguageName }}</a> {{ .Site.Params.languageflag }}</li>
+      <li><a href="{{ .Permalink }}" lang="{{ or (.Site.Language.LanguageCode) (.Site.Language.Lang) }}" title="{{ .Site.Language.LanguageName }}">{{ .Site.Language.LanguageName }}</a> {{ .Site.Params.languageflag }}</li>
     {{ end }}
   {{ else }}
     {{ range .Site.Languages }}
       {{ if ne .Lang $.Site.Language.Lang }}
-        <li><a href="{{ .Permalink }}" lang="{{ .Site.LanguageCode }}" title="{{ .Site.Language.LanguageName }}">{{ .Site.Language.LanguageName }}</a> {{ .Site.Params.languageflag }}</li>
+        <li><a href="{{ .Permalink }}" lang="{{ or (.Site.Language.LanguageCode) (.Site.Language.Lang) }}" title="{{ .Site.Language.LanguageName }}">{{ .Site.Language.LanguageName }}</a> {{ .Site.Params.languageflag }}</li>
       {{ end }}
     {{ end }}
   {{ end }}

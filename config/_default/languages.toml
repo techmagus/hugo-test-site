@@ -12,7 +12,7 @@
 
 [en-ph]
   languageName = "English (PH)"
-  languageCode = "en-PH"
+  languageCode = "en-ph"
   #languagePrefix = ""
   timeZone = "Asia/Manila"
   weight = 111
